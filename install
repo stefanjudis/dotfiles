@@ -1,0 +1,8 @@
+# link .gitconfig
+if [ -f ~/.gitconfig ]; then
+  echo "Removing old .gitconfig..."
+  rm ~/.gitconfig  
+fi
+
+echo "SymLinking new .gitconfig!"
+ln -s ~/Sites/.dotfiles/.gitconfig ~/.gitconfig
