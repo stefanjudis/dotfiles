@@ -3,6 +3,10 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 echo "running from $DIR..."
 
+# **********************************
+# GIT
+#
+
 # remove ~/.gitconfig
 if [ -f ~/.gitconfig ]; then
   echo "found old ~/.gitconfig - removing..."
@@ -12,6 +16,20 @@ fi
 # link ~/.gitconfig
 echo "sym linking new ~/.gitconfig with $DIR/.gitconfig!"
 ln -s $DIR/.gitconfig ~/.gitconfig
+
+# *********************************
+# VIM
+#
+
+# install Vundle ( vim pkg manager )
+if [ -d ~/.vim/bundle/Vundle.vim ]; then
+  echo "found old ~/.vim/bundle/Vundle.vim - removing..."
+  rm -rf ~/.vim/bundle/Vundle.vim
+fi
+
+echo "cloning Vundle into ~/.vim/bundle/Vundle.vim"
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 
 # remove ~/.vimrc
 if [ -f ~/.vimrc ]; then
