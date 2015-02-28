@@ -24,3 +24,5 @@
 	keepBackup = true
 [core]
 	editor = vim
+[push]
+	default = simple
