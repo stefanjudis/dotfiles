@@ -1,8 +1,14 @@
-# link .gitconfig
+# get current location
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+echo "running from $DIR..."
+
+# remove ~/.gitconfig
 if [ -f ~/.gitconfig ]; then
-  echo "Removing old .gitconfig..."
+  echo "found old ~/.gitconfig - removing..."
   rm ~/.gitconfig  
 fi
 
-echo "SymLinking new .gitconfig!"
-ln -s ~/Sites/.dotfiles/.gitconfig ~/.gitconfig
+# link ~/.gitconfig
+echo "sym linking new ~/.gitconfig with $DIR/.gitconfig!"
+ln -s $DIR/.gitconfig ~/.gitconfig
