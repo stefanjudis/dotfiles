@@ -1,0 +1,26 @@
+[user]
+	name = stefan judis
+	email = stefanjudis@gmail.com
+[color]
+	diff = auto
+	stats = auto
+	branch = auto
+	ui = auto
+[github]
+	user = stefanj
+	token = dd51385a52ab2697691245e4921ae56b
+[alias]
+  changes = diff --name-status -r
+  lg = log --graph --pretty=format:'%Cred%h%Creset %C(cyan)%an%Creset - %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  player = shortlog -sn
+  d = diff
+  dt = difftool
+  co = commit
+  ch = checkout
+  s = status
+  b = branch
+  a = add
+[mergetool]
+	keepBackup = true
+[core]
+	editor = vim
