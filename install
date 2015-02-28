@@ -12,3 +12,13 @@ fi
 # link ~/.gitconfig
 echo "sym linking new ~/.gitconfig with $DIR/.gitconfig!"
 ln -s $DIR/.gitconfig ~/.gitconfig
+
+# remove ~/.vimrc
+if [ -f ~/.vimrc ]; then
+  echo "found old ~/.vimrc - removing..."
+  rm ~/.vimrc
+fi
+
+# link ~/.vimrc
+echo  "sym linking new ~/.vimrc with $DIR/.vimrc"
+ln -s $DIR/.vimrc ~/.vimrc
