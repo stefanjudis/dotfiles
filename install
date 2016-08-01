@@ -42,6 +42,25 @@ echo  "sym linking new ~/.vimrc with $DIR/.vimrc\n"
 ln -s $DIR/.vimrc ~/.vimrc
 
 # *********************************
+# pokemon say
+#
+
+echo $'installing pokemonsay\n'
+brew install fortune
+brew install coreutils
+ln -s /usr/local/bin/gshuf /usr/local/bin/shuf
+
+if [ -d ~/Projects/pokemonsay ]; then
+  echo "found pokemonsay dir - removing..."
+  rm -rf ~/Projects/pokemonsay
+fi
+
+echo $'cloning pokemonsay'
+git clone http://github.com/possatti/pokemonsay ~/Projects/pokemonsay && cd ~/Projects/pokemonsay && ./install.sh
+
+brew install cowsay
+
+# *********************************
 # zsh
 #
 if [ -L ~/.zshrc ]; then
@@ -87,7 +106,23 @@ fi
 echo $'linking functions.zsh\n'
 ln -s $DIR/functions.zsh ~/.oh-my-zsh/custom/functions.zsh
 
+echo $'install pygmentize\n'
+sudo easy_install Pygments
 
+
+
+# *************************************
+# node 
+#
+echo $'installing node via nvm'
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash
+echo $'installed node\n'
+
+
+
+~/.nvm/nvm-exec install v6.3.1
+~/.nvm/nvm-exec alias default v6.3.1
+npm i -g npm
 
 # *************************************
 # hyperterm

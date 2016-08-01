@@ -7,9 +7,15 @@ function prompt_char {
   if [ $UID -eq 0 ]; then echo "%{$fg[red]%}#%{$reset_color%}"; else echo ">"; fi
 }
 
-PROMPT='%(?, ,%{$fg[red]%}FAIL: $?%{$reset_color%}
-)
-%{$fg_bold[blue]%}%n%{$reset_color%} @ %{$fg[red]%}%m%{$reset_color%}: %{$fg_bold[blue]%}%~%{$reset_color%}$(git_prompt_info)
+PS1_EMOJIS=("😀" "😬" "😁" "😂" "😃" "😄" "😅" "😆" "😇" "😉" "😊" "🙂" "🙃" "☺️" "😋" "😌" "😍" "😘" "😗" "😙" "😚" "😜" "😝" "😛" "🤑" "🤓" "😎" "🤗" "😏" "😶" "😑" "🙄" "🤔" "😳" "😞" "😟" "😠" "😔" "😕" "🙁" "😣" "😖" "😩" "😤" "😮" "😱" "😨" "😰" "😯" "😦" "😧" "😢" "😥" "😪" "😓" "😭" "😲" "🤐" "😷" "😴" "💩" "😺" "😸" "😹" "😻" "😼" "😽" "🙀" "😿" "😾" "👏" "👋" "👂" "👁" "💋" "🕶" "🐶" "🐱" "🐭" "🐹" "🐰" "🐻" "🐼" "🐨" "🐯" "🦁" "🐮" "🐷" "🐽" "🐸" "🐙" "🐵" "🙈" "🙉" "🙊" "🐒" "🐔" "🐧" "🐦" "🐤" "🐣" "🐥" "🐺" "🐗" "🐴" "🦄" "🐝" "🐛" "🐌" "🐞" "🐜" "🕷" "🦂" "🦀" "🐍" "🐢" "🐠" "🐟" "🐡" "🐬" "🐳" "🐋" "🐊" "🐆" "🐅" "🐃" "🐂" "🐄" "🐪" "🐫" "🐘" "🐐" "🐏" "🐑" "🐎" "🐖" "🐀" "🐁" "🐓" "🦃" "🕊" "🐕" "🐩" "🐈" "🐇" "🐿" "🐾" "🐉" "🐲" "🕸" "🍤" "🏇")
+
+_p1_emoji () {
+  printf "${PS1_EMOJIS[$RANDOM % 152]} ${PS1_EMOJIS[$RANDOM % 152]} ${PS1_EMOJIS[$RANDOM % 152]}  "
+}
+
+PROMPT='%(?, ,%{$fg[red]%}FAIL: $?%{$reset_color%})
+%{$fg_bold[blue]%}%n%{$reset_color%} $(_p1_emoji)  %{$fg_bold[blue]%}%~%{$reset_color%}$(git_prompt_info)
+
 %_$(prompt_char) '
 
 RPROMPT='%{$fg[green]%}[%*]%{$reset_color%}'
