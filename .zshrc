@@ -11,7 +11,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git node npm nyan github redis )
+plugins=(git node npm nyan github redis zsh-syntax-highlighting)
 
 # Customize to your needs...
 ZSH_THEME="stefanjudis"
@@ -24,7 +24,6 @@ unsetopt RM_STAR_SILENT
 setopt RM_STAR_WAIT
 
 source $ZSH/oh-my-zsh.sh
-source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 fortune | pokemonsay
 
