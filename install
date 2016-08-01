@@ -14,7 +14,7 @@ if [ -f ~/.gitconfig ]; then
 fi
 
 # link ~/.gitconfig
-echo "sym linking new ~/.gitconfig with $DIR/.gitconfig!"
+echo "sym linking new ~/.gitconfig with $DIR/.gitconfig!\n"
 ln -s $DIR/.gitconfig ~/.gitconfig
 
 # *********************************
@@ -38,5 +38,62 @@ if [ -f ~/.vimrc ]; then
 fi
 
 # link ~/.vimrc
-echo  "sym linking new ~/.vimrc with $DIR/.vimrc"
+echo  "sym linking new ~/.vimrc with $DIR/.vimrc\n"
 ln -s $DIR/.vimrc ~/.vimrc
+
+# *********************************
+# zsh
+#
+if [ -L ~/.zshrc ]; then
+  echo "found .zshrc - removing..."
+  rm ~/.zshrc
+fi
+
+echo $'linking .zshrc\n'
+ln -s $DIR/.zshrc ~/.zshrc
+
+
+
+
+if [ -L ~/.oh-my-zsh/custom/stefanjudis.zsh-theme ]; then
+  echo "found old stefanjudis.zsh-theme - removing..."
+  rm ~/.oh-my-zsh/custom/stefanjudis.zsh-theme
+fi
+
+echo $'linking stefanjudis zsh-theme\n'
+ln -s $DIR/stefanjudis.zsh-theme ~/.oh-my-zsh/custom/stefanjudis.zsh-theme
+
+
+
+
+if [ -L ~/.oh-my-zsh/custom/aliases.zsh ]; then
+  echo "found old aliases.zsh - removing..."
+  rm ~/.oh-my-zsh/custom/aliases.zsh
+fi
+
+echo $'linking aliases.zsh\n'
+ln -s $DIR/aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
+
+
+
+
+if [ -L ~/.oh-my-zsh/custom/functions.zsh ]; then
+  echo "found old functions.zsh - removing..."
+  rm ~/.oh-my-zsh/custom/functions.zsh
+fi
+
+echo $'linking functions.zsh\n'
+ln -s $DIR/functions.zsh ~/.oh-my-zsh/custom/functions.zsh
+
+
+
+# *************************************
+# hyperterm
+#
+if [ -L ~/.oh-my-zsh/custom/functions.zsh ]; then
+  echo "found old .hyperterm.js - removing..."
+  rm ~/.hyperterm.js
+fi
+
+echo $'linking .hyperterm.js\n'
+ln -s $DIR/.hyperterm.js ~/.hyperterm.js
