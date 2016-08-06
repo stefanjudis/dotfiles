@@ -138,3 +138,10 @@ fi
 
 echo $'linking .hyperterm.js\n'
 ln -s $DIR/.hyperterm.js ~/.hyperterm.js
+
+
+# *************************************
+# mac stuff
+#
+bash $DIR/mac.sh
+bash $DIR/npm.sh
