@@ -116,12 +116,16 @@ sudo easy_install Pygments
 #
 echo $'installing node via nvm'
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash
-echo $'installed node\n'
+echo $'installed nvm\n'
 
+# loading nvm for now
+export NVM_DIR="/usr/local/opt/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
+nvm install stable
+nvm alias default stable
 
-~/.nvm/nvm-exec install v6.3.1
-~/.nvm/nvm-exec alias default v6.3.1
+echo $'updating npm\n'
 npm i -g npm
 
 # *************************************

@@ -28,8 +28,9 @@ source $ZSH/oh-my-zsh.sh
 fortune | pokemonsay
 
 # nvm set up
+export NVM_DIR="/usr/local/opt/nvm"
 
-[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
 ###-begin-npm-completion-###
