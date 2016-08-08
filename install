@@ -134,3 +134,13 @@ fi
 
 echo $'linking .hyperterm.js\n'
 ln -s $DIR/.hyperterm.js ~/.hyperterm.js
+
+
+# *************************************
+# MacOS things
+#
+
+# disable crappy smart quotes and dashes
+echo $'disabling smart quotes and dashes...'
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
