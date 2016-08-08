@@ -1,21 +1,5 @@
-# apache handling
-alias ap_restart='sudo /opt/local/etc/LaunchDaemons/org.macports.apache2/apache2.wrapper restart'
-alias ap_start='sudo /opt/local/etc/LaunchDaemons/org.macports.apache2/apache2.wrapper start'
-alias ap_stop='sudo /opt/local/etc/LaunchDaemons/org.macports.apache2/apache2.wrapper stop'
-alias ap_conf='cd /opt/local/apache2/conf/'
-alias ap_vhosts='vim /opt/local/apache2/conf/extra/httpd-vhosts.conf'
-
 # sexy list handling
 alias ll='ls -AFhlG'
-
-
-# mysql handling
-alias mysqlstart='sudo /opt/local/bin/mysqld_safe5 &'
-alias mysqlstop='sudo mysqladmin5 -uroot -proot shutdown'
-alias mysqladmin='mysqladmin5 -uroot -proot'
-alias mysql='mysql5'
-alias mysqldump='mysqldump5'
-
 
 # start couchdb
 alias couchdb="sudo couchdb"
@@ -53,12 +37,4 @@ cloneFunction() {
 }
 
 alias clone=cloneFunction
-
-
-# benchmarking stuff to remember
-#siege -c20 www.stefanjudis.de/__get/all -b -t30sbenchmarking
-
-# alias npme='npm --registry registry.npmjs.eu '
-
-# enable harmony by default
-# alias node='node --harmony'
+alias t=trash
