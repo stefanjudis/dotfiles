@@ -51,3 +51,7 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 echo $'disabling smart quotes and dashes...'
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+# set date display in menu bar
+echo "Set date display in menu bar"
+defaults write com.apple.menuextra.clock "DateFormat" "EEE MMM d  H.mm"

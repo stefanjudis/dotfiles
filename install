@@ -109,6 +109,12 @@ ln -s $DIR/functions.zsh ~/.oh-my-zsh/custom/functions.zsh
 echo $'install pygmentize\n'
 sudo easy_install Pygments
 
+if [ -d ~/.oh-my-zsh/custom/plugins/git-open ]; then
+  echo "found zsh plugin git-open  - removing..."
+  rm -rf ~/.oh-my-zsh/custom/plugins/git-open
+fi
+
+git clone git@github.com:paulirish/git-open.git ~/.oh-my-zsh/custom/plugins/git-open
 
 
 # *************************************
