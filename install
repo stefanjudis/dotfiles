@@ -130,6 +130,9 @@ export NVM_DIR="/usr/local/opt/nvm"
 
 nvm install stable
 nvm alias default stable
+# workaround this bug
+# https://github.com/creationix/nvm/issues/855
+nvm use --delete-prefix stable
 
 echo $'updating npm\n'
 npm i -g npm
