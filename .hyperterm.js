@@ -59,7 +59,8 @@ module.exports = {
     'hyperterm-bold-tab',
     'hyperterm-tab-icons',
     'hyperterm-visor',
-    'hyperterm-cursor'
+    'hyperterm-cursor',
+    'hyperlinks'
   ],
 
   // in development, you can create a directory under
