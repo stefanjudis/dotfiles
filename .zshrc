@@ -28,9 +28,9 @@ source $ZSH/oh-my-zsh.sh
 fortune | pokemonsay
 
 # nvm set up
-export NVM_DIR="/usr/local/opt/nvm"
-
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
 nvm use --delete-prefix default --silent
