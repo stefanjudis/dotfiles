@@ -46,12 +46,29 @@ defaults write NSGlobalDomain KeyRepeat -int 2
 echo "Set a shorter Delay until key repeat"
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
-
-# disable crappy smart quotes and dashes
-echo $'disabling smart quotes and dashes...'
+echo "disabling smart quotes and dashes..."
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
-# set date display in menu bar
 echo "Set date display in menu bar"
 defaults write com.apple.menuextra.clock "DateFormat" "EEE MMM d  H.mm"
+
+echo "Expand save panel by default"
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+echo "Expand print panel by default"
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
+echo "Disable the “Are you sure you want to open this application?” dialog"
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+echo "Disable smart quotes as they’re annoying when typing code"
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
+echo "Stop iTunes from responding to the keyboard media keys"
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+
+echo "Hide all desktop icons because who need 'em'"
+defaults write com.apple.finder CreateDesktop -bool false
