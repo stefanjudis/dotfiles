@@ -22,5 +22,12 @@
   keepBackup = true
 [core]
   editor = vim
+	excludesfile = /Users/stefanjudis/.gitignore_global
 [push]
   default = simple
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[color "diff"]
+	old = red strike
+	new = green italic
