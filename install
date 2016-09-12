@@ -61,6 +61,12 @@ git clone http://github.com/possatti/pokemonsay ~/Projects/pokemonsay && cd ~/Pr
 brew install cowsay
 
 # *********************************
+# highlight
+
+echo $'installing highlight'
+brew install highlight
+
+# *********************************
 # zsh
 #
 if [ -L ~/.zshrc ]; then
