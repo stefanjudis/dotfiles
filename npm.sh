@@ -7,3 +7,5 @@ echo "Installing live-server"
 npm i -g live-server
 echo "Installing svgo"
 npm i -g svgo
+echo "Installing commitizen"
+npm i -g commitizen
