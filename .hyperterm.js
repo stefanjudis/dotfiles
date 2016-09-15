@@ -57,10 +57,12 @@ module.exports = {
     'hyperseti',
     'hyperterm-title',
     'hyperterm-bold-tab',
-    'hyperterm-tab-icons',
+    // broken right now
+    //'hyperterm-tab-icons',
     'hyperterm-visor',
     'hyperterm-cursor',
-    'hyperlinks'
+    'hyperlinks',
+    'hyperterm-clicky'
   ],
 
   // in development, you can create a directory under
