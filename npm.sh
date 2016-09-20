@@ -5,6 +5,8 @@ echo "Installing trash-cli"
 npm i -g trash-cli
 echo "Installing live-server"
 npm i -g live-server
+echo "Installing http-server"
+npm i -g http-server
 echo "Installing svgo"
 npm i -g svgo
 echo "Installing commitizen"
