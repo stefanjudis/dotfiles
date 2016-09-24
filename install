@@ -67,6 +67,12 @@ echo $'installing highlight'
 brew install highlight
 
 # *********************************
+# httpstat
+
+echo $'installing httpstat'
+brew install httpstat
+
+# *********************************
 # zsh
 #
 if [ -L ~/.zshrc ]; then
