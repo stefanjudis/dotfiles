@@ -41,7 +41,8 @@ echo "Show Status bar in Finder"
 defaults write com.apple.finder ShowStatusBar -bool true
 
 echo "Set a blazingly fast keyboard repeat rate"
-defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 echo "Set a shorter Delay until key repeat"
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
