@@ -73,6 +73,11 @@ echo $'installing httpstat'
 brew install httpstat
 
 # *********************************
+# pretty markdown preview
+echo $'installing pretty markdown preview'
+brew cask install qlmarkdown
+
+# *********************************
 # zsh
 #
 if [ -L ~/.zshrc ]; then
