@@ -35,8 +35,9 @@ export NVM_DIR="$HOME/.nvm"
 
 nvm use --delete-prefix default --silent
 
-### java setup for nativescript
+### setup for nativescript
 export JAVA_HOME=$(/usr/libexec/java_home)
+export ANDROID_HOME=/usr/local/opt/android-sdk
 
 ###-begin-npm-completion-###
 #
