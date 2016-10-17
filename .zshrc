@@ -97,3 +97,9 @@ elif type compctl &>/dev/null; then
 fi
 ###-end-npm-completion-###
 
+
+###-tns-completion-start-###
+if [ -f /Users/stefanjudis/.tnsrc ]; then 
+    source /Users/stefanjudis/.tnsrc 
+fi
+###-tns-completion-end-###
