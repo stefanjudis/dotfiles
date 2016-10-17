@@ -35,6 +35,9 @@ export NVM_DIR="$HOME/.nvm"
 
 nvm use --delete-prefix default --silent
 
+### java setup for nativescript
+export JAVA_HOME=$(/usr/libexec/java_home)
+
 ###-begin-npm-completion-###
 #
 # npm command completion script
