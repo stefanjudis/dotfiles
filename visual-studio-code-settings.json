@@ -1,6 +1,35 @@
-// Platzieren Sie Ihre Einstellungen in dieser Datei, um die Standardeinstellungen zu überschreiben.
 {
-    "files.trimTrailingWhitespace": true,
-    "editor.tabSize": 2,
-    "files.autoSave": "onFocusChange"
+  "editor.fontSize": 10,
+  "editor.rulers": [ 80 ],
+  "editor.tabSize": 2,
+  "files.trimTrailingWhitespace": true,
+  "files.autoSave": "onFocuesChange",
+  "editor.renderWhitespace": true,
+  "align.leftSeparators": [],
+  "align.rightSeparators": [
+    ":",
+    "=",
+    "+=",
+    "-=",
+    "*=",
+    "/=",
+    "?=",
+    "|=",
+    "%=",
+    ".=",
+    "=>"
+  ],
+  "align.spaceSeparators": [
+    ":",
+    "=",
+    "+=",
+    "-=",
+    "*=",
+    "/=",
+    "?=",
+    "|=",
+    "%=",
+    ".=",
+    "=>"
+  ]
 }
