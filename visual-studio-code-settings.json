@@ -1,0 +1,6 @@
+// Platzieren Sie Ihre Einstellungen in dieser Datei, um die Standardeinstellungen zu überschreiben.
+{
+    "files.trimTrailingWhitespace": true,
+    "editor.tabSize": 2,
+    "files.autoSave": "onFocusChange"
+}

@@ -169,3 +169,4 @@ ln -s $DIR/.hyperterm.js ~/.hyperterm.js
 
 bash $DIR/mac.sh
 bash $DIR/npm.sh
+bash $DIR/cask.sh
