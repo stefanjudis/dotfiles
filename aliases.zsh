@@ -29,11 +29,22 @@ alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
 alias chrome='open -a "/Applications/Google Chrome.app" --args --force-renderer-accessibility'
 alias chromeDebug='chrome --remote-debugging-port=9222'
 
+# npm stuff
+alias ni='npm install'
+alias nis='npm install --save'
+alias nid='npm install --save-dev'
+alias nig='npm install --global'
+alias ns='npm start'
+alias nt='npm test'
+alias nit='npm install && npm test'
+alias nk='npm link'
+alias nr='npm run'
+
+
 # git handling
 cloneFunction() {
-  git clone git@github.com:$1 $2
+  git clone $1 $2
   cd $2
-  subl .
 }
 
 alias clone=cloneFunction
