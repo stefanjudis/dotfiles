@@ -11,3 +11,5 @@ echo "Installing svgo"
 npm i -g svgo
 echo "Installing commitizen"
 npm i -g commitizen
+echo "Installing elm"
+npm i -g elm
