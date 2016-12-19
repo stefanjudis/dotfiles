@@ -18,6 +18,8 @@
   s = status
   b = branch
   a = add
+  pr  = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+  log-fn = "!f() { git log -L :$1:$2; }; f"
 [mergetool]
   keepBackup = true
 [core]
@@ -34,5 +36,4 @@
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
   path = 
-[alias]
-  pr  = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+
