@@ -18,70 +18,6 @@ echo "sym linking new ~/.gitconfig with $DIR/.gitconfig!\n"
 ln -s $DIR/.gitconfig ~/.gitconfig
 
 # *********************************
-# VIM
-#
-
-# install Vundle ( vim pkg manager )
-if [ -d ~/.vim/bundle/Vundle.vim ]; then
-  echo "found old ~/.vim/bundle/Vundle.vim - removing..."
-  rm -rf ~/.vim/bundle/Vundle.vim
-fi
-
-echo "cloning Vundle into ~/.vim/bundle/Vundle.vim"
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-
-# remove ~/.vimrc
-if [ -f ~/.vimrc ]; then
-  echo "found old ~/.vimrc - removing..."
-  rm ~/.vimrc
-fi
-
-# link ~/.vimrc
-echo  "sym linking new ~/.vimrc with $DIR/.vimrc\n"
-ln -s $DIR/.vimrc ~/.vimrc
-
-# *********************************
-# pokemon say
-#
-
-echo $'installing pokemonsay\n'
-brew install fortune
-brew install coreutils
-ln -s /usr/local/bin/gshuf /usr/local/bin/shuf
-
-if [ -d ~/Projects/pokemonsay ]; then
-  echo "found pokemonsay dir - removing..."
-  rm -rf ~/Projects/pokemonsay
-fi
-
-echo $'cloning pokemonsay'
-git clone http://github.com/possatti/pokemonsay ~/Projects/pokemonsay && cd ~/Projects/pokemonsay && ./install.sh
-
-brew install cowsay
-
-# *********************************
-# highlight
-
-echo $'installing highlight'
-brew install highlight
-
-# *********************************
-# httpstat
-
-echo $'installing httpstat'
-brew install httpstat
-
-# *********************************
-# phantomjs
-brew install phantomjs
-
-# *********************************
-# pretty markdown preview
-echo $'installing pretty markdown preview'
-brew cask install qlmarkdown
-
-# *********************************
 # zsh
 #
 if [ -L ~/.zshrc ]; then
@@ -137,25 +73,6 @@ fi
 
 git clone git@github.com:paulirish/git-open.git ~/.oh-my-zsh/custom/plugins/git-open
 
-
-# *************************************
-# node
-#
-echo $'installing node via nvm'
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash
-echo $'installed nvm\n'
-
-# loading nvm for now
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
-nvm install stable
-nvm alias default stable
-nvm use stable
-
-echo $'updating npm\n'
-npm i -g npm
-
 # *************************************
 # hyperterm
 #
@@ -168,7 +85,8 @@ echo $'linking .hyperterm.js\n'
 ln -s $DIR/.hyperterm.js ~/.hyperterm.js
 
 
-
+bash $DIR/vim.sh
 bash $DIR/mac.sh
-bash $DIR/npm.sh
+bash $DIR/node.sh
+bash $DIR/brew.sh
 bash $DIR/cask.sh

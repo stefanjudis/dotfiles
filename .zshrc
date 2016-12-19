@@ -38,6 +38,7 @@ nvm use --delete-prefix default --silent
 ### setup for nativescript
 export JAVA_HOME=$(/usr/libexec/java_home)
 export ANDROID_HOME=/usr/local/opt/android-sdk
+export PATH=$PATH:/Applications/Genymotion\ Shell.app/Contents/MacOS/:/Applications/Genymotion.app/Contents/MacOS/
 
 ###-begin-npm-completion-###
 #

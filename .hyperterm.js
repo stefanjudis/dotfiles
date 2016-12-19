@@ -16,10 +16,20 @@ module.exports = {
     backgroundColor: '#000',
 
     // border color (window, tabs)
-    borderColor: '#333',
+    borderColor: 'red',
 
     // custom css to embed in the main window
-    css: '',
+    css: `
+    .term_fit:not(.term_term) {
+      opacity: 0.5;
+    }
+
+    .term_fit.term_active {
+      opacity: 1;
+      transition: opacity 0.12s ease-in-out;
+      will-change: opacity;
+    }
+    `,
 
     // custom css to embed in the terminal window
     termCSS: '',
@@ -57,10 +67,9 @@ module.exports = {
     'hyperseti',
     'hyperterm-title',
     'hyperterm-bold-tab',
-    // broken right now
-    //'hyperterm-tab-icons',
+    'hyperterm-tab-icons',
     'hyperterm-visor',
-    'hyperterm-cursor',
+    //'hyperterm-cursor',
     'hyperlinks',
     'hyperterm-clicky'
   ],

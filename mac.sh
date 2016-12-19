@@ -1,7 +1,10 @@
 #!/usr/bin/env sh
 
-echo -e "\n\nSetting OS X settings"
-echo "=============================="
+echo ""
+echo "#############################"
+echo "# Setting global mac configs from mac.sh"
+echo "#############################"
+echo ""
 
 # echo "Finder: show all filename extensions"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
