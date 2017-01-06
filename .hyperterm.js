@@ -59,17 +59,15 @@ module.exports = {
     ],
     visor: {
       hotkey: 'F13'
-    }
+    },
   },
 
   plugins: [
     // nice color scheme
     'hyperseti',
     'hyperterm-title',
-    'hyperterm-bold-tab',
-    'hyperterm-tab-icons',
+    'hyper-tabs-enhanced',
     'hyperterm-visor',
-    //'hyperterm-cursor',
     'hyperlinks',
     'hyperterm-clicky'
   ],
