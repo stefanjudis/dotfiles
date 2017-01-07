@@ -49,3 +49,6 @@ cloneFunction() {
 
 alias clone=cloneFunction
 alias t=trash
+
+# drop and reinstall node modules
+alias dnm=rm -rf ./node_modules && npm i
