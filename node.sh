@@ -43,3 +43,5 @@ echo "Installing wifi-password-cli"
 npm i -g wifi-password-cli
 echo "Installing imagemin-cli"
 npm i -g imagemin-cli
+echo "Installing browserify"
+npm i -g browserify
