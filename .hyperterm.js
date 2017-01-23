@@ -60,16 +60,22 @@ module.exports = {
     visor: {
       hotkey: 'F13'
     },
+
+    // hyperCommandGifs: {
+    //   disabledCommands: ['test']
+    // }
   },
 
   plugins: [
     // nice color scheme
-    'hyperseti',
+    'hyperterm-seti',
     'hyperterm-title',
     'hyper-tabs-enhanced',
     'hyperterm-visor',
     'hyperlinks',
-    'hyperterm-clicky'
+    'hyperterm-clicky',
+    'hyper-command-gifs',
+    'hyper-fileio'
   ],
 
   // in development, you can create a directory under
