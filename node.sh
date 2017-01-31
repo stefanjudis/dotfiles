@@ -45,3 +45,5 @@ echo "Installing imagemin-cli"
 npm i -g imagemin-cli
 echo "Installing browserify"
 npm i -g browserify
+echo "Installing git-recall"
+npm i -g git-recall
