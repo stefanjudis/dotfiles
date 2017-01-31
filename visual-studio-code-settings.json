@@ -1,5 +1,7 @@
 {
-  "editor.fontSize": 10,
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontSize": 11,
   "editor.rulers": [ 80 ],
   "editor.tabSize": 2,
   "files.trimTrailingWhitespace": true,
