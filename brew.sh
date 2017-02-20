@@ -46,3 +46,7 @@ brew install httpstat
 # *********************************
 # phantomjs
 brew install phantomjs
+
+# *********************************
+# jq command line json parser
+brew install jq
