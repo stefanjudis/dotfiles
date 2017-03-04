@@ -47,3 +47,9 @@ echo "Installing browserify"
 npm i -g browserify
 echo "Installing git-recall"
 npm i -g git-recall
+echo "Installing prettyjson"
+npm i -g prettyjson
+echo "Installing Alfred dark mode"
+npm i -g alfred-dark-mode
+echo "Installing fkill"
+npm i -g fkill-cli
