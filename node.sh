@@ -56,4 +56,5 @@ echo "Installing Alfred dark mode"
 npm i -g alfred-dark-mode
 echo "Installing Alfred fkill"
 npm i -g alfred-fkill
-
+echo "Installing Alfred hl"
+npm i -g alfred-hl
