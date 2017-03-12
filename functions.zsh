@@ -14,36 +14,46 @@ function scpp() {
 # quickly query entries from contentful
 function ctf() {
   if ! [ -f ~/.contentful.json ]; then
-    echo "Please define ~/.contentful.json ...";
-    return;
+    echo "Please define ~/.contentful.json ..."
+    return 1
   fi
 
-  DATA=($(jq -r '.website' ~/.contentful.json));
-  SPACE_ID=($(echo $DATA | jq -r '.spaceId'));
-  CDA_TOKEN=($(echo $DATA | jq -r '.cdaToken'));
-
-  if [ $1 == "entry" ]; then
-    if ! [ $# -eq 2 ]; then
-      echo "Wrong parameter usage: \n  $ ctf entry <entryId>";
-    else
-      ENTRY_ID=$2;
-      echo "Calling -> https://cdn.contentful.com/spaces/${SPACE_ID}/entries?access_token=${CDA_TOKEN}&sys.id=${ENTRY_ID}\n";
-      curl "https://cdn.contentful.com/spaces/${SPACE_ID}/entries?access_token=${CDA_TOKEN}&sys.id=${ENTRY_ID}" | jq ".items[0]";
-    fi
-
-    return;
+  if ! [ $# -gt 0 ]; then
+    echo "Please define command to execute\n  $ ctf <command>"
+    return 1
   fi
 
+  DATA=($(jq -r '.'$2 ~/.contentful.json))
+  SPACE_ID=($(echo $DATA | jq -r '.spaceId'))
+  CDA_TOKEN=($(echo $DATA | jq -r '.cdaToken'))
 
-  if [ $1 == "list" ]; then
-    if ! [ $# -eq 2 ]; then
-      echo "Wrong parameter usage: \n  $ ctf list <contentTypeId>";
-    else
-      CONTENT_TYPE=$2;
-      echo "Calling -> https://cdn.contentful.com/spaces/${SPACE_ID}/entries?access_token=${CDA_TOKEN}&content_type=${CONTENT_TYPE}\n";
-      curl "https://cdn.contentful.com/spaces/${SPACE_ID}/entries?access_token=${CDA_TOKEN}&content_type=${CONTENT_TYPE}" | jq ".items";
-    fi
+  if [ $1 == "entry" ] && ! ctf_entry $SPACE_ID $CDA_TOKEN $3; then
+    return 1
+  fi
 
-    return;
+  if [ $1 == "list" ] && ! ctf_list $SPACE_ID $CDA_TOKEN $3; then
+    return 1
+  fi
+}
+
+function ctf_entry() {
+  if ! [ $# -eq 3 ]; then
+    echo "Wrong parameter usage: \n  $ ctf entry <configName> <entryId>"
+    return 1
+  else
+    ENTRY_ID=$3
+    echo "Calling -> https://cdn.contentful.com/spaces/${SPACE_ID}/entries?access_token=${CDA_TOKEN}&sys.id=${ENTRY_ID}\n"
+    curl "https://cdn.contentful.com/spaces/${SPACE_ID}/entries?access_token=${CDA_TOKEN}&sys.id=${ENTRY_ID}" | jq ".items[0]"
+  fi
+}
+
+function ctf_list() {
+  if ! [ $# -eq 3 ]; then
+    echo "Wrong parameter usage: \n  $ ctf list <configName> <contentTypeId>";
+    return 1
+  else
+    CONTENT_TYPE=$3;
+    echo "Calling -> https://cdn.contentful.com/spaces/${SPACE_ID}/entries?access_token=${CDA_TOKEN}&content_type=${CONTENT_TYPE}\n";
+    curl "https://cdn.contentful.com/spaces/${SPACE_ID}/entries?access_token=${CDA_TOKEN}&content_type=${CONTENT_TYPE}" | jq ".items";
   fi
 }
