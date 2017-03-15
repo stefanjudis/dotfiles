@@ -23,7 +23,7 @@ function ctf() {
     return 1
   fi
 
-  DATA=($(jq -r '.'$2 ~/.contentful.json))
+  DATA=($(jq '.'$2 ~/.contentful.json))
   SPACE_ID=($(echo $DATA | jq -r '.spaceId'))
   CDA_TOKEN=($(echo $DATA | jq -r '.cdaToken'))
 
