@@ -66,3 +66,18 @@ function compress_video() {
 
   ffmpeg -i $1 -vcodec h264 -b:v 1000k -acodec mp2 $2
 }
+
+#
+# watchman test.txt 1 echo 'Tada!'
+#
+function watchman {
+  initial_time=$(stat -f '%Z' $1)
+  while true; do
+    changed_time=$(stat -f '%Z' $1)
+    if [ $initial_time != $changed_time ]; then
+      eval ${@:3}
+      initial_time=$changed_time
+    fi
+    sleep $2
+  done
+}
