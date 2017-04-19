@@ -57,3 +57,14 @@ function ctf_list() {
     curl "https://cdn.contentful.com/spaces/${SPACE_ID}/entries?access_token=${CDA_TOKEN}&content_type=${CONTENT_TYPE}" | jq ".items";
   fi
 }
+
+function compress_video() {
+  echo $#
+
+  if ! [ $# -eq 2 ]; then
+    echo "Wrong parameter usage: \n $ compress_video <inputFile> <outputFile>"
+    return 1
+  fi
+
+  ffmpeg -i $1 -vcodec h264 -b:v 1000k -acodec mp2 $2
+}

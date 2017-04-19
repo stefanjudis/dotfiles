@@ -50,3 +50,8 @@ brew install phantomjs
 # *********************************
 # jq command line json parser
 brew install jq
+
+
+# *********************************
+# ffmpeg for quick video compression
+brew install ffmpeg
