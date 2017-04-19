@@ -39,6 +39,7 @@ alias nt='npm test'
 alias nit='npm install && npm test'
 alias nk='npm link'
 alias nr='npm run'
+alias dnm='rm -rf node_modules && npm i'
 
 
 # git handling
@@ -49,6 +50,3 @@ cloneFunction() {
 
 alias clone=cloneFunction
 alias t=trash
-
-# drop and reinstall node modules
-alias dnm='rm -rf node_modules && npm i'
