@@ -59,8 +59,6 @@ function ctf_list() {
 }
 
 function compress_video() {
-  echo $#
-
   if ! [ $# -eq 2 ]; then
     echo "Wrong parameter usage: \n $ compress_video <inputFile> <outputFile>"
     return 1
