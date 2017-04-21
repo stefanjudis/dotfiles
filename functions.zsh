@@ -58,13 +58,14 @@ function ctf_list() {
   fi
 }
 
-function compress_video() {
-  if ! [ $# -eq 2 ]; then
-    echo "Wrong parameter usage: \n $ compress_video <inputFile> <outputFile>"
+function prepare_video() {
+  if ! [ $# -eq 1 ]; then
+    echo "Wrong parameter usage: \n $ compress_video <inputFile> <outputFileBase>"
     return 1
   fi
 
-  ffmpeg -i $1 -vcodec h264 -b:v 1000k -acodec mp2 $2
+  ffmpeg -i $1 -vcodec h264 -b:v 1000k -acodec mp2 $2.mp4
+  ffmpeg -i $2.mp4 -strict -2 $2.webm
 }
 
 #
