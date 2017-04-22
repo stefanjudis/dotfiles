@@ -68,6 +68,17 @@ function prepare_video() {
   ffmpeg -i $2.mp4 -strict -2 $2.webm
 }
 
+function gif_to_video() {
+  if ! [ $# -eq 1 ]; then
+    echo "Wrong parameter usage: \n $ compress_video <inputFile> <outputFileBase>"
+    return 1
+  fi
+
+  ffmpeg -i $0 -movflags faststart -pix_fmt yuv420p -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" $2.mp4
+  ffmpeg -i $2.mp4 -strict -2 $2.webm
+}
+
+
 #
 # watchman test.txt 1 echo 'Tada!'
 #
