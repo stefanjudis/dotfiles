@@ -84,6 +84,17 @@ fi
 echo $'linking .hyperterm.js\n'
 ln -s $DIR/.hyperterm.js ~/.hyperterm.js
 
+# *************************************
+# npm
+#
+if [ -L ~/.npmrc ]; then
+  echo "found old .npmrc - removing..."
+  rm ~/.npmrc
+fi
+
+echo $'linking .npmrc\n'
+ln -s $DIR/.npmrc ~/.npmrc
+
 
 bash $DIR/vim.sh
 bash $DIR/mac.sh
