@@ -59,8 +59,8 @@ function ctf_list() {
 }
 
 function prepare_video() {
-  if ! [ $# -eq 1 ]; then
-    echo "Wrong parameter usage: \n $ compress_video <inputFile> <outputFileBase>"
+  if ! [ $# -eq 2 ]; then
+    echo "Wrong parameter usage: \n $ prepare_video <inputFile> <outputFileBase>"
     return 1
   fi
 
