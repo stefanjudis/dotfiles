@@ -3,6 +3,12 @@ function f() {
   find . -name "$1"
 }
 
+# quickly look up a folder
+# grep-folder perf-*
+function grep-folder() {
+  ll | grep $1
+}
+
 
 # lets toss an image onto my server and pbcopy those sweetcheeks.
 function scpp() {
