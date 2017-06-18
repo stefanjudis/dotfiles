@@ -99,3 +99,15 @@ function watchman {
     sleep $2
   done
 }
+
+#
+# Find a port blocker
+#
+function find_port_blocker() {
+  if ! [ $# -eq 1 ]; then
+    echo "Please define the port you want to check \n $ find_port_blocker 8000"
+    return 1
+  fi
+
+  lsof -i tcp:$1
+} 
