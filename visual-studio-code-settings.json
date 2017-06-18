@@ -4,34 +4,9 @@
   "editor.fontSize": 11,
   "editor.rulers": [ 80 ],
   "editor.tabSize": 2,
+  "editor.renderWhitespace": "all",
   "files.trimTrailingWhitespace": true,
-  "files.autoSave": "onFocuesChange",
-  "editor.renderWhitespace": true,
-  "align.leftSeparators": [],
-  "align.rightSeparators": [
-    ":",
-    "=",
-    "+=",
-    "-=",
-    "*=",
-    "/=",
-    "?=",
-    "|=",
-    "%=",
-    ".=",
-    "=>"
-  ],
-  "align.spaceSeparators": [
-    ":",
-    "=",
-    "+=",
-    "-=",
-    "*=",
-    "/=",
-    "?=",
-    "|=",
-    "%=",
-    ".=",
-    "=>"
-  ]
+  "files.autoSave": "onFocusChange",
+  "window.zoomLevel": 0,
+  "workbench.iconTheme": "material-icon-theme"
 }
