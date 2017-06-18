@@ -43,13 +43,18 @@ alias dnm='rm -rf node_modules && npm i'
 
 
 # git handling
-cloneFunction() {
-  git clone $1 $2
-  cd $2
+clone() {
+  git clone --depth=1 $1
+  cd $(basename ${1%.*})
+  if [ -L ./package.json ]; then
+    npm install
+  fi
 }
 
-alias clone=cloneFunction
 alias t=trash
 
 # MAC adress changer (free wifi hack)
 alias freewifi="sudo ifconfig en0 ether `openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//'`"
+
+# directory short cuts
+alias p='cd ~/Projects/'
