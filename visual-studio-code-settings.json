@@ -1,12 +1,18 @@
 {
   "editor.fontLigatures": true,
   "editor.fontFamily": "Fira Code",
-  "editor.fontSize": 11,
-  "editor.rulers": [ 80 ],
+  "editor.fontSize": 10,
+  "editor.rulers": [
+    80
+  ],
   "editor.tabSize": 2,
+  "editor.formatOnSave": false,
   "editor.renderWhitespace": "all",
+  "editor.tabCompletion": true,
+  "editor.autoIndent": true,
   "files.trimTrailingWhitespace": true,
   "files.autoSave": "onFocusChange",
   "window.zoomLevel": 0,
-  "workbench.iconTheme": "material-icon-theme"
+  "workbench.iconTheme": "material-icon-theme",
+  "extensions.ignoreRecommendations": false
 }
