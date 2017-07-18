@@ -31,7 +31,8 @@ ln -s $DIR/.zshrc ~/.zshrc
 echo $'installing zsh-syntax-highlighting'
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-
+echo $'installing zsh-autosuggestions'
+git clone git://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 if [ -L ~/.oh-my-zsh/custom/stefanjudis.zsh-theme ]; then
   echo "found old stefanjudis.zsh-theme - removing..."

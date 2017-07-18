@@ -35,7 +35,7 @@ module.exports = {
     termCSS: '',
 
     // custom padding (css format, i.e.: `top right bottom left`)
-    padding: '12px 14px',
+    padding: '12px',
 
     // some color overrides. see http://bit.ly/29k1iU2 for
     // the full list
@@ -57,13 +57,7 @@ module.exports = {
       '#00ffff',
       '#ffffff'
     ],
-    visor: {
-      hotkey: 'F13'
-    },
 
-    // hyperCommandGifs: {
-    //   disabledCommands: ['test']
-    // }
   },
 
   plugins: [
@@ -71,11 +65,8 @@ module.exports = {
     'hyperterm-seti',
     'hyperterm-title',
     'hyper-tabs-enhanced',
-    'hyperterm-visor',
     'hyperlinks',
-    'hyperterm-clicky',
-    'hyper-command-gifs',
-    'hyper-fileio'
+    'hyper-command-gifs'
   ],
 
   // in development, you can create a directory under
