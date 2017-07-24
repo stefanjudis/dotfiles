@@ -66,7 +66,7 @@ module.exports = {
     'hyperterm-title',
     'hyper-tabs-enhanced',
     'hyperlinks',
-    'hyper-command-gifs'
+    'gitrocket'
   ],
 
   // in development, you can create a directory under
