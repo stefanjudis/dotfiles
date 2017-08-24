@@ -60,3 +60,6 @@ echo "Installing Alfred fkill"
 npm i -g alfred-fkill
 echo "Installing Alfred hl"
 npm i -g alfred-hl
+
+echo "Installing vmd (view markdown)"
+npm install -g vmd
