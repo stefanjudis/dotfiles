@@ -37,8 +37,6 @@ echo "Installing svgo"
 npm i -g svgo
 echo "Installing commitizen"
 npm i -g commitizen
-echo "Installing elm"
-npm i -g elm
 echo "Installing wifi"
 npm i -g manage-wifi-cli
 echo "Installing wifi-password-cli"
