@@ -21,9 +21,9 @@ alias ccat=' pygmentize -O style=monokai -f console256 -g'
 alias ip="echo Your ip is; dig +short myip.opendns.com @resolver1.opendns.com;"
 
 
-# create new server on given port
-alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
-
+# set up https-server
+# https://paulbrowne.xyz/https-localhost
+alias https-server='http-server --ssl --cert ~/.ssl/localhost.crt --key ~/.ssl/localhost.key -a localhost -o'
 
 # launch applications
 alias chrome='open -a "/Applications/Google Chrome.app" --args --force-renderer-accessibility'
