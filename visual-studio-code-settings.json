@@ -6,13 +6,14 @@
     80
   ],
   "editor.tabSize": 2,
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "editor.renderWhitespace": "all",
   "editor.tabCompletion": true,
   "editor.autoIndent": true,
   "files.trimTrailingWhitespace": true,
   "files.autoSave": "onFocusChange",
-  "window.zoomLevel": 0,
+  "window.zoomLevel": -1,
   "workbench.iconTheme": "material-icon-theme",
-  "extensions.ignoreRecommendations": false
+  "extensions.ignoreRecommendations": false,
+  "prettier.eslintIntegration": true
 }
