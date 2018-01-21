@@ -18,3 +18,9 @@ PROMPT='
 %_$(prompt_char) '
 
 RPROMPT='%{$fg[green]%}[%*]%{$reset_color%}'
+
+# color title bar in iterm
+# https://www.felixjung.io/posts/custom-iterm2-titlebar-background-colors
+echo -e "\033]6;1;bg;red;brightness;50\a"
+echo -e "\033]6;1;bg;green;brightness;54\a"
+echo -e "\033]6;1;bg;blue;brightness;62\a"
