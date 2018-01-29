@@ -61,3 +61,6 @@ npm i -g alfred-hl
 
 echo "Installing vmd (view markdown)"
 npm install -g vmd
+
+echo "Installing select-branch"
+npm install -g select-branch
