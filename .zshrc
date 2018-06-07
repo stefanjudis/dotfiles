@@ -3,7 +3,7 @@ export PATH=:/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH
 ZSH=$HOME/.oh-my-zsh
 
 export GOPATH=$HOME/.go-modules
-export EDITOR=atom
+export EDITOR=code
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
