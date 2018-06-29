@@ -111,3 +111,20 @@ function find_port_blocker() {
 
   lsof -i tcp:$1
 } 
+
+# Create a git.io short URL
+gitio() {
+	if [ -z "${1}" ] || [ -z "${2}" ]; then
+		echo "Usage: \`gitio slug url\`"
+		return 1
+	fi
+	curl -i https://git.io/ -F "url=${2}" -F "code=${1}"
+}
+
+# Change MAC adress to get around public wifi limitations
+hack_the_space() {
+  NEW_MAC_ADDRESS=$(openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//')
+  echo $NEW_MAC_ADDRESS
+  sudo ifconfig en0 ether "$NEW_MAC_ADDRESS"
+  echo "New MAC Address set"
+}
