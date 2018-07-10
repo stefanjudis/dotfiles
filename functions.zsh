@@ -131,10 +131,6 @@ hack_the_space() {
 
 # Create beautiful code images
 carbon() {
-  if [ ! -d ~/Projects/pokemonsay ]; then
-    mkdir /tmp/carbon
-  fi
-
-  carbon-now <(pbpaste) -l /tmp/carbon/
+  carbon-now <(pbpaste) -l /tmp/carbon
   open /tmp/carbon/
 }
