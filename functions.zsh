@@ -110,7 +110,7 @@ function find_port_blocker() {
   fi
 
   lsof -i tcp:$1
-} 
+}
 
 # Create a git.io short URL
 gitio() {
@@ -127,4 +127,14 @@ hack_the_space() {
   echo $NEW_MAC_ADDRESS
   sudo ifconfig en0 ether "$NEW_MAC_ADDRESS"
   echo "New MAC Address set"
+}
+
+# Create beautiful code images
+carbon() {
+  if [ ! -d ~/Projects/pokemonsay ]; then
+    mkdir /tmp/carbon
+  fi
+
+  carbon-now <(pbpaste) -l /tmp/carbon/
+  open /tmp/carbon/
 }
