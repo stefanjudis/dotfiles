@@ -15,7 +15,7 @@ alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && 
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
 # colored cat command
-alias ccat=' pygmentize -O style=monokai -f console256 -g'
+alias cat='bat'
 
 # ip address
 alias ip="echo Your ip is; dig +short myip.opendns.com @resolver1.opendns.com;"

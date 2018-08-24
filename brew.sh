@@ -61,3 +61,7 @@ brew install ffmpeg --with-vpx --with-vorbis --with-libvorbis --with-vpx --with-
 
 # *********************************
 brew cask install graphql-playground
+
+# *********************************
+# a better `cat`
+brew install bat
