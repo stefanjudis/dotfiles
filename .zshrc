@@ -25,8 +25,6 @@ setopt RM_STAR_WAIT
 
 source $ZSH/oh-my-zsh.sh
 
-fortune | pokemonsay
-
 # nvm set up
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
