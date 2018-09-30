@@ -1,7 +1,7 @@
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[blue]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%} (╯°□°)╯"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%} ヾ(⌐■_■)ノ"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}ˣ"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%} ✔"
 
 function node_prompt_version {
   if which node &> /dev/null; then
