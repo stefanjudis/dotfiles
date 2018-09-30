@@ -7,7 +7,6 @@
   branch = auto
   ui = auto
 [alias]
-  changes = diff --name-status -r
   lg = log --graph --pretty=format:'%Cred%h%Creset %C(cyan)%an%Creset - %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   player = shortlog -sn
   d = diff
@@ -20,20 +19,17 @@
   a = add
   pr  = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
   log-fn = "!f() { git log -L :$1:$2; }; f"
+  hide = update-index --assume-unchanged
+  unhide = update-index --no-assume-unchanged
+  unhide-all = update-index --really-refresh
+  hidden = !git ls-files -v | grep \"^[a-z]\"
 [mergetool]
   keepBackup = true
 [core]
   editor = vim
   excludesfile = /Users/stefanjudis/.gitignore_global
 [push]
-  default = simple
-[mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
+  default = current
 [color "diff"]
   old = red strike
   new = green italic
-[difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
-
