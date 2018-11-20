@@ -122,9 +122,9 @@ elif type compctl &>/dev/null; then
 fi
 ###-end-npm-completion-###
 
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/stefanjudis/.nvm/versions/node/v8.2.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/stefanjudis/.nvm/versions/node/v8.2.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
 
-###-tns-completion-start-###
-if [ -f /Users/stefanjudis/.tnsrc ]; then 
-    source /Users/stefanjudis/.tnsrc 
-fi
-###-tns-completion-end-###
+# autojump kickoff
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
