@@ -134,3 +134,8 @@ carbon() {
   carbon-now <(pbpaste) -l /tmp/carbon
   open /tmp/carbon/
 }
+
+# Load .env file
+loadEnv() {
+  set -o allexport; source .env; set +o allexport
+}
