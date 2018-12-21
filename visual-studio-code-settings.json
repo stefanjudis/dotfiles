@@ -6,14 +6,30 @@
     80
   ],
   "editor.tabSize": 2,
-  "editor.formatOnSave": true,
   "editor.renderWhitespace": "all",
   "editor.tabCompletion": true,
   "editor.autoIndent": true,
   "files.trimTrailingWhitespace": true,
   "files.autoSave": "onFocusChange",
-  "window.zoomLevel": -1,
+  "window.zoomLevel": 0,
   "workbench.iconTheme": "material-icon-theme",
   "extensions.ignoreRecommendations": false,
-  "prettier.eslintIntegration": true
+  "gitlens.keymap": "chorded",
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.historyExplorer.enabled": true,
+  "prettier.requireConfig": true,
+  "prettier.singleQuote": true,
+  "editor.formatOnSave": true,
+  "workbench.colorTheme": "Glacier",
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true
 }
