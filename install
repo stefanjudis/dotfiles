@@ -75,17 +75,6 @@ fi
 git clone git@github.com:paulirish/git-open.git ~/.oh-my-zsh/custom/plugins/git-open
 
 # *************************************
-# hyperterm
-#
-if [ -L ~/.oh-my-zsh/custom/functions.zsh ]; then
-  echo "found old .hyperterm.js - removing..."
-  rm ~/.hyperterm.js
-fi
-
-echo $'linking .hyperterm.js\n'
-ln -s $DIR/.hyperterm.js ~/.hyperterm.js
-
-# *************************************
 # npm
 #
 if [ -L ~/.npmrc ]; then
