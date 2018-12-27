@@ -14,13 +14,6 @@ brew unlink highlight
 brew install highlight
 
 # *********************************
-# httpstat
-
-echo $'installing httpstat'
-brew unlink httpstat
-brew install httpstat
-
-# *********************************
 # jq command line json parser
 brew install jq
 
