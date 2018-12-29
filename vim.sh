@@ -7,18 +7,6 @@ echo "# Running Vim setup from vim.sh"
 echo "#############################"
 echo ""
 
-brew install macvim
-brew linkapps
-
-echo $'cloning VimBox...'
-
-if [ -d ~/Projects/VimBox ]; then
-  echo "found old VimBox clone - removing..."
-  rm -rf ~/Projects/VimBox
-fi
-
-git clone https://github.com/jordwalke/VimBox/ ~/Projects/VimBox
-
 echo $'linking vim configs'
 
 ### linking ~/.vimrc
