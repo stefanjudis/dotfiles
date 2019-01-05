@@ -29,6 +29,10 @@ brew install ffmpeg --with-vpx --with-vorbis --with-libvorbis --with-vpx --with-
 brew cask install graphql-playground
 
 # *********************************
+# markdown client
+brew cask install typora
+
+# *********************************
 # a better `cat`
 brew install bat
 
