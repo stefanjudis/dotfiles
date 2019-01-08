@@ -1,5 +1,5 @@
 # sexy list handling
-alias ll='ls -AFhlG'
+alias ll='exa -la --git --git-ignore'
 
 # start couchdb
 alias couchdb="sudo couchdb"

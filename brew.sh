@@ -39,3 +39,7 @@ brew install bat
 # *********************************
 # a better `cd`
 brew install autojump
+
+# *********************************
+brew install exa
+
