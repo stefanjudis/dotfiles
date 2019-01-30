@@ -42,6 +42,3 @@ brew install autojump
 
 # *********************************
 brew install exa
-
-# *********************************
-brew install ngrok
