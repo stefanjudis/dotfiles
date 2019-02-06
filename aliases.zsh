@@ -1,15 +1,6 @@
 # sexy list handling
 alias ll='exa -la --git --git-ignore'
 
-# start couchdb
-alias couchdb="sudo couchdb"
-
-# start redisdb
-alias redis="redis-server /opt/local/etc/redis.conf"
-
-# start mongodb
-alias mongodb="mongod --config /usr/local/etc/mongod.conf"
-
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
@@ -61,7 +52,6 @@ alias freewifi="sudo ifconfig en0 ether `openssl rand -hex 6 | sed 's/\(..\)/\1:
 alias p='cd ~/Projects/'
 alias d='cd ~/Downloads/'
 alias sj='cd ~/Projects/stefan-judis-website/'
-alias docs='cd ~/Projects/cf-doc-app/'
 
 # create files in subfolders
 function touchp() {
