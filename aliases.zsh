@@ -43,6 +43,10 @@ clone() {
   fi
 }
 
+alias gcop='git co -p'
+alias gcop!='git co -p --amend'
+
+# trash
 alias t=trash
 
 # MAC adress changer (free wifi hack)
