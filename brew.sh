@@ -42,3 +42,7 @@ brew install autojump
 
 # *********************************
 brew install exa
+
+# *********************************
+brew tap jeroenknoops/tap
+brew install gitin
