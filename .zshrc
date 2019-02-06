@@ -23,6 +23,9 @@ export LC_ALL=en_US.UTF-8
 unsetopt RM_STAR_SILENT
 setopt RM_STAR_WAIT
 
+# make command prefixed with space not appear in history
+setopt histignorespace
+
 source $ZSH/oh-my-zsh.sh
 
 # nvm set up
