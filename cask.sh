@@ -25,3 +25,10 @@ ln -s $DIR/visual-studio-code-settings.json ~/Library/Application\ Support/Code/
 # pretty markdown preview
 echo $'installing pretty markdown preview'
 brew cask install qlmarkdown
+
+
+# *********************************
+# fira code
+echo "installing fira code"
+brew tap caskroom/fonts
+brew cask install font-fira-code
