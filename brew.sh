@@ -55,3 +55,6 @@ brew install gitin
 
 # *********************************
 brew cask install firefox
+
+# *********************************
+brew cask install iterm2
