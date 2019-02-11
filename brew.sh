@@ -9,6 +9,8 @@ echo "\n"
 # *********************************
 # zsh
 brew install zsh zsh-completions
+# set it as default shell
+chsh -s /bin/zsh
 
 # *********************************
 # highlight
