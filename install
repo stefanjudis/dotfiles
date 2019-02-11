@@ -86,8 +86,8 @@ echo $'linking .npmrc\n'
 ln -s $DIR/.npmrc ~/.npmrc
 
 
+bash $DIR/brew.sh
 bash $DIR/vim.sh
 bash $DIR/mac.sh
 bash $DIR/node.sh
-bash $DIR/brew.sh
 bash $DIR/cask.sh

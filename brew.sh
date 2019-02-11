@@ -58,3 +58,6 @@ brew cask install firefox
 
 # *********************************
 brew cask install iterm2
+
+# *********************************
+brew cask install alfred
