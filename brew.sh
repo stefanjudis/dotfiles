@@ -7,6 +7,10 @@ echo "#############################"
 echo "\n"
 
 # *********************************
+# zsh
+brew install zsh zsh-completions
+
+# *********************************
 # highlight
 
 echo $'installing highlight'
@@ -46,3 +50,6 @@ brew install exa
 # *********************************
 brew tap jeroenknoops/tap
 brew install gitin
+
+# *********************************
+brew cask install firefox
