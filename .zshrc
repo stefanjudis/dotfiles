@@ -16,6 +16,9 @@ plugins=(git node npm github zsh-syntax-highlighting zsh-autosuggestions git-ope
 # Customize to your needs...
 ZSH_THEME="stefanjudis"
 
+# Customize history
+HIST_STAMPS="yyyy-mm-dd"
+
 # fix pearl cowsay warnings
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
