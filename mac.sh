@@ -76,3 +76,6 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/nul
 
 echo "Hide all desktop icons because who need 'em'"
 defaults write com.apple.finder CreateDesktop -bool false
+
+echo "Remove delay when taking a screenshot"
+defaults write com.apple.screencapture show-thumbnail -bool false
