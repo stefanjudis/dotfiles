@@ -36,7 +36,7 @@ alias dnm='rm -rf node_modules && npm i'
 
 # git handling
 clone() {
-  git clone --depth=1 $1
+  git clone $1
   cd $(basename ${1%.*})
   if [ -L ./package.json ]; then
     npm install
