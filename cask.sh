@@ -57,3 +57,5 @@ brew cask install iterm2
 brew cask install alfred
 brew cask install wavebox
 brew cask install zoomus
+brew cask install spotify
+brew cask install insomnia
