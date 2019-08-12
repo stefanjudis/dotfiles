@@ -26,7 +26,8 @@ code --install-extension rebornix.project-snippets
 # https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 code --install-extension esbenp.prettier-vscode
 
+# https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag
+code --install-extension formulahendry.auto-rename-tag
 
-
-
-
+# https://marketplace.visualstudio.com/items?itemName=wmaurer.change-case
+code --install-extension wmaurer.change-case
