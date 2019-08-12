@@ -31,3 +31,9 @@ code --install-extension formulahendry.auto-rename-tag
 
 # https://marketplace.visualstudio.com/items?itemName=wmaurer.change-case
 code --install-extension wmaurer.change-case
+
+# https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer
+code --install-extension CoenraadS.bracket-pair-colorizer
+
+# https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets
+code --install-extension xabikos.JavaScriptSnippets
