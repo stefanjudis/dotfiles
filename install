@@ -91,3 +91,4 @@ bash $DIR/vim.sh
 bash $DIR/mac.sh
 bash $DIR/node.sh
 bash $DIR/cask.sh
+bash $DIR/code.sh
