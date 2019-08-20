@@ -37,3 +37,7 @@ code --install-extension CoenraadS.bracket-pair-colorizer
 
 # https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets
 code --install-extension xabikos.JavaScriptSnippets
+
+# https://marketplace.visualstudio.com/items?itemName=ronnidc.nunjucks
+code --install-extension ronnidc.nunjucks
+
