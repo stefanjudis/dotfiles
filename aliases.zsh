@@ -38,7 +38,10 @@ alias dnm='rm -rf node_modules && npm i'
 clone() {
   git clone $1
   cd $(basename ${1%.*})
-  if [ -L ./package.json ]; then
+  if test -f "./package.json"; then
+    echo "..."
+    echo "Found package.json... installing dependencies"
+    echo "..."
     npm install
   fi
 }
