@@ -119,3 +119,17 @@ fi
 
 # autojump kickoff
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+# twilio autocomplete setup
+TWILIO_AC_ZSH_SETUP_PATH=/Users/sjudis/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH;
+
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/sjudis/.nvm/versions/node/v12.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/sjudis/.nvm/versions/node/v12.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+iterm2_print_user_vars() {
+  iterm2_set_user_var nodeVersion $(node -v)
+  iterm2_set_user_var pwd $(pwd)
+}
