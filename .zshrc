@@ -25,6 +25,8 @@ source $ZSH/oh-my-zsh.sh
 
 ################################################################################
 # iterm
+
+# https://www.iterm2.com/documentation-shell-integration.html
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # set variables for iterm status bar
