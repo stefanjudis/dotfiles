@@ -5,30 +5,36 @@ ZSH=$HOME/.oh-my-zsh
 export GOPATH=$HOME/.go-modules
 export EDITOR=code
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git node npm github zsh-syntax-highlighting zsh-autosuggestions git-open)
+################################################################################
+# zsh
+unsetopt RM_STAR_SILENT
+setopt RM_STAR_WAIT
+# make command prefixed with space not appear in history
+setopt histignorespace
 
-# Customize to your needs...
+################################################################################
+# oh-my-zsh
+
+plugins=(git node npm github zsh-syntax-highlighting zsh-autosuggestions git-open)
 ZSH_THEME="stefanjudis"
 
 # Customize history
 HIST_STAMPS="yyyy-mm-dd"
 
-# fix pearl cowsay warnings
-export LC_CTYPE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-
-unsetopt RM_STAR_SILENT
-setopt RM_STAR_WAIT
-
-# make command prefixed with space not appear in history
-setopt histignorespace
-
 source $ZSH/oh-my-zsh.sh
 
-# nvm set up
+################################################################################
+# iterm
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# set variables for iterm status bar
+iterm2_print_user_vars() {
+  iterm2_set_user_var nodeVersion $(node -v)
+  iterm2_set_user_var pwd $(pwd)
+}
+
+################################################################################
+# nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
@@ -54,6 +60,9 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
+################################################################################
+# npm
 
 ###-begin-npm-completion-###
 #
@@ -113,23 +122,16 @@ elif type compctl &>/dev/null; then
 fi
 ###-end-npm-completion-###
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/stefanjudis/.nvm/versions/node/v8.2.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/stefanjudis/.nvm/versions/node/v8.2.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-
-# autojump kickoff
+################################################################################
+# autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
+################################################################################
 # twilio autocomplete setup
 TWILIO_AC_ZSH_SETUP_PATH=/Users/sjudis/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH;
 
+################################################################################
+# serverless
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /Users/sjudis/.nvm/versions/node/v12.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/sjudis/.nvm/versions/node/v12.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-iterm2_print_user_vars() {
-  iterm2_set_user_var nodeVersion $(node -v)
-  iterm2_set_user_var pwd $(pwd)
-}
