@@ -59,3 +59,4 @@ brew cask install wavebox
 brew cask install zoomus
 brew cask install spotify
 brew cask install insomnia
+brew cask install ngrok
