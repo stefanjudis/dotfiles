@@ -11,6 +11,8 @@ unsetopt RM_STAR_SILENT
 setopt RM_STAR_WAIT
 # make command prefixed with space not appear in history
 setopt histignorespace
+# remove dups from history
+setopt hist_ignore_all_dups
 
 ################################################################################
 # oh-my-zsh
