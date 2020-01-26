@@ -43,14 +43,16 @@ echo "Installing wifi-password-cli"
 npm i -g wifi-password-cli
 echo "Installing imagemin-cli"
 npm i -g imagemin-cli
-echo "Installing browserify"
-npm i -g browserify
 echo "Installing git-recall"
 npm i -g git-recall
 echo "Installing prettyjson"
 npm i -g prettyjson
 echo "Installing fkill"
 npm i -g fkill-cli
+echo "Installing now cli"
+npm i -g now
+echo "Installing now Netlify cli"
+npm i -g netlify-cli
 
 echo "Installing Alfred dark mode"
 npm i -g alfred-dark-mode
