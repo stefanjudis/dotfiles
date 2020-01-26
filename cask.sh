@@ -40,15 +40,6 @@ brew cask install graphql-playground
 # markdown client
 brew cask install typora
 
-# *********************************
-# a better `cat`
-brew install bat
-
-# *********************************
-# a better `cd`
-brew install autojump
-brew install exa
-
 brew tap jeroenknoops/tap
 brew install gitin
 
