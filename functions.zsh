@@ -64,13 +64,59 @@ function ctf_list() {
   fi
 }
 
+function update_demo_number() {
+  DATA=($(jq '.' ~/.contentfulrc.json))
+  SPACE_ID=($(echo $DATA | jq -r '.activeSpaceId'))
+  CMA_TOKEN=($(echo $DATA | jq -r '.cmaToken'))
+  CONTENT_TYPE_ID='6cMh0SuiuG3J1T4GwYdmTJ';
+  ENTRY_ID='6cMh0SuiuG3J1T4GwYdmTJ';
+
+  ENTRY_VERSION=($(curl --request GET \
+     --header "Authorization: Bearer $CMA_TOKEN" \
+     --silent \
+     https://api.contentful.com/spaces/$SPACE_ID/environments/master/entries/${ENTRY_ID} | jq ".sys.version"))
+
+  curl --request PUT \
+     --header "Authorization: Bearer $CMA_TOKEN" \
+     --header 'Content-Type: application/vnd.contentful.management.v1+json' \
+     --header "X-Contentful-Content-Type: twilioStuff" \
+     --header "X-Contentful-Version: $ENTRY_VERSION" \
+     --data-binary "{
+       \"fields\": {
+         \"title\": {
+           \"en-US\": \"Twilio Demo Stuff\"
+         },
+         \"phoneNumber\": {
+           \"en-US\": \"$1\"
+         },
+         \"currentDemo\": {
+           \"en-US\": \"$2\"
+         }
+       }
+     }" \
+     --silent \
+     https://api.contentful.com/spaces/$SPACE_ID/environments/master/entries/${ENTRY_ID} > /dev/null
+
+  ENTRY_VERSION=$((ENTRY_VERSION+1))
+
+  curl --request PUT \
+     --header "Authorization: Bearer $CMA_TOKEN" \
+     --header "X-Contentful-Version: $ENTRY_VERSION" \
+     --silent \
+     https://api.contentful.com/spaces/$SPACE_ID/environments/master/entries/$ENTRY_ID/published > /dev/null
+
+  echo;
+  echo "Go to https://tryit.now.sh and click the number. 🎉";
+  echo;
+}
+
 function prepare_video() {
   if ! [ $# -eq 2 ]; then
     echo "Wrong parameter usage: \n $ prepare_video <inputFile> <outputFileBase>"
     return 1
   fi
 
-  ffmpeg -i $1 -vcodec h264 -b:v 1000k -acodec mp2 $2.mp4
+  ffmpeg -i $1 -vcodec h264 -acodec mp2 $2.mp4
   ffmpeg -i $2.mp4 -strict -2 $2.webm
 }
 
