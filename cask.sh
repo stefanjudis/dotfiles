@@ -29,9 +29,10 @@ brew cask install qlmarkdown
 
 # *********************************
 # fira code
-echo "installing fira code"
+echo "installing custom fonts"
 brew tap homebrew/cask-fonts
 brew cask install font-fira-code
+brew cask install font-oswald
 
 # *********************************
 brew cask install graphql-playground
