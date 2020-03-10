@@ -9,8 +9,7 @@ echo ""
 # get current location
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
-# *********************************
-# Visual studio code
+echo "installing VSCode"
 brew cask uninstall --force visual-studio-code && brew cask install visual-studio-code
 
 if [ -L ~/Library/Application\ Support/Code/user/settings.json ]; then
@@ -21,29 +20,19 @@ fi
 ln -s $DIR/visual-studio-code-settings.json ~/Library/Application\ Support/Code/User/settings.json
 
 
-# *********************************
-# pretty markdown preview
-echo $'installing pretty markdown preview'
-brew cask install qlmarkdown
 
-
-# *********************************
-# custom fonts
 echo "installing custom fonts"
 brew tap homebrew/cask-fonts
 brew cask install font-fira-code
 brew cask install font-oswald
 
-# *********************************
 brew cask install graphql-playground
-
-# *********************************
-# markdown client
 brew cask install typora
 
 brew tap jeroenknoops/tap
 brew install gitin
 
+brew cask install qlmarkdown
 brew cask install firefox
 brew cask install iterm2
 brew cask install alfred
@@ -51,3 +40,5 @@ brew cask install wavebox
 brew cask install zoomus
 brew cask install spotify
 brew cask install ngrok
+# enable audio and brightness control for ext screens
+brew cask install monitorcontrol
