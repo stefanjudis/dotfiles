@@ -28,7 +28,7 @@ brew cask install qlmarkdown
 
 
 # *********************************
-# fira code
+# custom fonts
 echo "installing custom fonts"
 brew tap homebrew/cask-fonts
 brew cask install font-fira-code
