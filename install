@@ -28,9 +28,15 @@ fi
 echo $'linking .zshrc\n'
 ln -s $DIR/.zshrc ~/.zshrc
 
+# *************************************
+# oh-my-zsh
+#
+
+###
 echo $'installing zsh-syntax-highlighting'
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
+###
 echo $'installing zsh-autosuggestions'
 git clone git://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
@@ -39,12 +45,11 @@ if [ -L ~/.oh-my-zsh/custom/stefanjudis.zsh-theme ]; then
   rm ~/.oh-my-zsh/custom/stefanjudis.zsh-theme
 fi
 
+###
 echo $'linking stefanjudis zsh-theme\n'
 ln -s $DIR/stefanjudis.zsh-theme ~/.oh-my-zsh/custom/stefanjudis.zsh-theme
 
-
-
-
+###
 if [ -L ~/.oh-my-zsh/custom/aliases.zsh ]; then
   echo "found old aliases.zsh - removing..."
   rm ~/.oh-my-zsh/custom/aliases.zsh
@@ -53,26 +58,15 @@ fi
 echo $'linking aliases.zsh\n'
 ln -s $DIR/aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
 
-
-
-
+###
 if [ -L ~/.oh-my-zsh/custom/functions.zsh ]; then
   echo "found old functions.zsh - removing..."
   rm ~/.oh-my-zsh/custom/functions.zsh
 fi
 
+###
 echo $'linking functions.zsh\n'
 ln -s $DIR/functions.zsh ~/.oh-my-zsh/custom/functions.zsh
-
-echo $'install pygmentize\n'
-sudo easy_install Pygments
-
-if [ -d ~/.oh-my-zsh/custom/plugins/git-open ]; then
-  echo "found zsh plugin git-open  - removing..."
-  rm -rf ~/.oh-my-zsh/custom/plugins/git-open
-fi
-
-git clone git@github.com:paulirish/git-open.git ~/.oh-my-zsh/custom/plugins/git-open
 
 # *************************************
 # npm
@@ -85,7 +79,20 @@ fi
 echo $'linking .npmrc\n'
 ln -s $DIR/.npmrc ~/.npmrc
 
+# *************************************
+# vim
+#
+if [ -L ~/.vimrc ]; then
+  echo "found old .vimrc - removing..."
+  rm ~/.vimrc
+fi
 
+echo $'linking .vimrc\n'
+ln -s $DIR/.vimrc ~/.vimrc
+
+# *************************************
+# Other scripts
+#
 bash $DIR/brew.sh
 bash $DIR/vim.sh
 bash $DIR/mac.sh

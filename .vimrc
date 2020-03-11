@@ -1,4 +1,4 @@
 " set line numbers
-set number
+:set number
 " set jj to be ESC
-imap jj <Esc>
+:imap jj <Esc>
