@@ -8,7 +8,7 @@ echo "running from $DIR..."
 #
 
 # remove ~/.gitconfig
-if [ -f ~/.gitconfig ]; then
+if [ -L ~/.gitconfig ]; then
   echo "found old ~/.gitconfig - removing..."
   rm ~/.gitconfig
 fi
