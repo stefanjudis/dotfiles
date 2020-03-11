@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>1D76588C-48CB-42B9-86EA-5A750E734325</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>am</string>
+			<key>plusSpaces</key>
+			<true/>
+			<key>text</key>
+			<string>Amazon</string>
+			<key>url</key>
+			<string>http://www.amazon.de/s?url=search-alias=aps&amp;field-keywords={query}&amp;tag=alfredapp-20</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
