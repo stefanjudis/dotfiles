@@ -44,5 +44,3 @@ fi
 
 ln -s $DIR/.vim/vimrc.custom.after ~/.vim/vimrc.custom.after
 
-echo "Install VimBox Font"
-open ~/.vim/Fonts/InconsolataDz/Inconsolata-dz\ for\ Powerline.otf

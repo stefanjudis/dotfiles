@@ -54,8 +54,6 @@ npm i -g now
 echo "Installing now Netlify cli"
 npm i -g netlify-cli
 
-echo "Installing Alfred dark mode"
-npm i -g alfred-dark-mode
 echo "Installing Alfred fkill"
 npm i -g alfred-fkill
 echo "Installing Alfred hl"
