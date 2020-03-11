@@ -42,3 +42,7 @@ brew install autojump
 # *********************************
 # a better `ll`
 brew install exa
+
+# *********************************
+# GitHub CLI
+brew install github/gh/gh
