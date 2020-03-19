@@ -1,7 +1,9 @@
 # get current location
-DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+ROOT_DIR=$1
+CONFIG_DIR="$ROOT_DIR/config"
+SCRIPTS_DIR="$ROOT_DIR/scripts"
 
-echo "running from $DIR..."
+echo "running commands/install.sh"
 
 # **********************************
 # GIT
@@ -14,8 +16,8 @@ if [ -L ~/.gitconfig ]; then
 fi
 
 # link ~/.gitconfig
-echo "sym linking new ~/.gitconfig with $DIR/.gitconfig!\n"
-ln -s $DIR/.gitconfig ~/.gitconfig
+echo "sym linking new ~/.gitconfig with $CONFIG_DIR/.gitconfig!\n"
+ln -s $CONFIG_DIR/.gitconfig ~/.gitconfig
 
 # *********************************
 # zsh
@@ -26,7 +28,7 @@ if [ -L ~/.zshrc ]; then
 fi
 
 echo $'linking .zshrc\n'
-ln -s $DIR/.zshrc ~/.zshrc
+ln -s $CONFIG_DIR/.zshrc ~/.zshrc
 
 # *************************************
 # oh-my-zsh
@@ -47,7 +49,7 @@ fi
 
 ###
 echo $'linking stefanjudis zsh-theme\n'
-ln -s $DIR/stefanjudis.zsh-theme ~/.oh-my-zsh/custom/stefanjudis.zsh-theme
+ln -s $CONFIG_DIR/stefanjudis.zsh-theme ~/.oh-my-zsh/custom/stefanjudis.zsh-theme
 
 ###
 if [ -L ~/.oh-my-zsh/custom/aliases.zsh ]; then
@@ -56,7 +58,7 @@ if [ -L ~/.oh-my-zsh/custom/aliases.zsh ]; then
 fi
 
 echo $'linking aliases.zsh\n'
-ln -s $DIR/aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
+ln -s $CONFIG_DIR/aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
 
 ###
 if [ -L ~/.oh-my-zsh/custom/functions.zsh ]; then
@@ -66,7 +68,7 @@ fi
 
 ###
 echo $'linking functions.zsh\n'
-ln -s $DIR/functions.zsh ~/.oh-my-zsh/custom/functions.zsh
+ln -s $CONFIG_DIR/functions.zsh ~/.oh-my-zsh/custom/functions.zsh
 
 # *************************************
 # npm
@@ -77,7 +79,7 @@ if [ -L ~/.npmrc ]; then
 fi
 
 echo $'linking .npmrc\n'
-ln -s $DIR/.npmrc ~/.npmrc
+ln -s $CONFIG_DIR/.npmrc ~/.npmrc
 
 # *************************************
 # vim
@@ -88,14 +90,13 @@ if [ -L ~/.vimrc ]; then
 fi
 
 echo $'linking .vimrc\n'
-ln -s $DIR/.vimrc ~/.vimrc
+ln -s $CONFIG_DIR/.vimrc ~/.vimrc
 
 # *************************************
 # Other scripts
 #
-bash $DIR/brew.sh
-bash $DIR/vim.sh
-bash $DIR/mac.sh
-bash $DIR/node.sh
-bash $DIR/cask.sh
-bash $DIR/code.sh
+bash $SCRIPTS_DIR/brew.sh $ROOT_DIR
+bash $SCRIPTS_DIR/mac.sh $ROOT_DIR
+bash $SCRIPTS_DIR/node.sh $ROOT_DIR
+bash $SCRIPTS_DIR/cask.sh $ROOT_DIR
+bash $SCRIPTS_DIR/code.sh $ROOT_DIR

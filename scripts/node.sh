@@ -64,6 +64,4 @@ npm install -g vmd
 
 echo "Installing select-branch"
 npm install -g select-branch
-echo "Installing carbon-now-cli"
-npm install -g carbon-now-cli
 

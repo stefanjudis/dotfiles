@@ -3,7 +3,11 @@
 ## How to get started
 
 ```
-bash ~/path/to/dotfiles/install
+# install stuff and link config files
+~/path/to/dotfiles/dotfiles install
+
+# back up config files
+~/path/to/dotfiles/dotfiles backup
 ```
 
 ## What's included
@@ -11,7 +15,7 @@ bash ~/path/to/dotfiles/install
 - Alfred preferences
 - brew dependencies
 - iTerm2 config
-- npm config and dependencies 
+- npm config and dependencies
 - shell functions
 - VSCode config and plugins
 - zsh config and aliases
