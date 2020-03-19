@@ -6,7 +6,7 @@ SCRIPTS_DIR="$ROOT_DIR/scripts"
 echo "running commands/install.sh"
 
 # **********************************
-# GIT
+# git
 #
 
 # remove ~/.gitconfig
@@ -94,7 +94,7 @@ ln -s $CONFIG_DIR/.vimrc ~/.vimrc
 
 # *************************************
 # Other scripts
-#
+
 bash $SCRIPTS_DIR/brew.sh $ROOT_DIR
 bash $SCRIPTS_DIR/mac.sh $ROOT_DIR
 bash $SCRIPTS_DIR/node.sh $ROOT_DIR

@@ -1,4 +1,7 @@
-#!/usr/bin/env sh
+#!/bin/bash
+
+ROOT_DIR=$1
+CONFIG_DIR="$ROOT_DIR/config"
 
 echo ""
 echo "#############################"
@@ -9,13 +12,30 @@ echo ""
 # *************************************
 # node
 #
-echo $'installing node via nvm'
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash
+
+get_latest_release() {
+  curl --silent "https://api.github.com/repos/$1/releases/latest" | # Get latest release from GitHub api
+    grep '"tag_name":' |                                            # Get tag line
+    sed -E 's/.*"([^"]+)".*/\1/'                                    # Pluck JSON value
+}
+
+LATEST_NVM_TAG=$(get_latest_release "nvm-sh/nvm")
+
+echo "installing node via nvm ($LATEST_NVM_TAG)"
+curl -o- "https://raw.githubusercontent.com/nvm-sh/nvm/$LATEST_NVM_TAG/install.sh" | bash
 echo $'installed nvm\n'
 
 # loading nvm for now
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+if [ -L "$NVM_DIR/default-packages" ]; then
+  echo "found nvm default-packages - removing..."
+  rm "$NVM_DIR/default-packages"
+fi
+
+echo "linking $NVM_DIR/default-packages"
+ln -s "$CONFIG_DIR/nvm-default-packages" "$NVM_DIR/default-packages"
 
 nvm install stable
 nvm alias default stable
@@ -23,45 +43,3 @@ nvm use stable
 
 echo $'updating npm\n'
 npm i -g npm
-
-echo -e "\n\nGlobal installed npm modules"
-echo "=============================="
-
-echo "Installing trash-cli"
-npm i -g trash-cli
-echo "Installing live-server"
-npm i -g live-server
-echo "Installing http-server"
-npm i -g http-server
-echo "Installing svgo"
-npm i -g svgo
-echo "Installing commitizen"
-npm i -g commitizen
-echo "Installing wifi"
-npm i -g manage-wifi-cli
-echo "Installing wifi-password-cli"
-npm i -g wifi-password-cli
-echo "Installing imagemin-cli"
-npm i -g imagemin-cli
-echo "Installing git-recall"
-npm i -g git-recall
-echo "Installing prettyjson"
-npm i -g prettyjson
-echo "Installing fkill"
-npm i -g fkill-cli
-echo "Installing now cli"
-npm i -g now
-echo "Installing now Netlify cli"
-npm i -g netlify-cli
-
-echo "Installing Alfred fkill"
-npm i -g alfred-fkill
-echo "Installing Alfred hl"
-npm i -g alfred-hl
-
-echo "Installing vmd (view markdown)"
-npm install -g vmd
-
-echo "Installing select-branch"
-npm install -g select-branch
-
