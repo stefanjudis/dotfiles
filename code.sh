@@ -41,3 +41,20 @@ code --install-extension xabikos.JavaScriptSnippets
 # https://marketplace.visualstudio.com/items?itemName=ronnidc.nunjucks
 code --install-extension ronnidc.nunjucks
 
+# https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+code --install-extension EditorConfig.EditorConfig
+
+# https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
+code --install-extension eamodio.gitlens
+
+# https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments
+code --install-extension aaron-bond.better-comments
+
+# https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost
+code --install-extension wix.vscode-import-cost
+
+# https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense
+code --install-extension christian-kohler.npm-intellisense
+
+# https://marketplace.visualstudio.com/items?itemName=jeremyljackson.vs-docblock
+code --install-extension jeremyljackson.vs-docblock
