@@ -1,0 +1,14 @@
+alfred-fkill
+alfred-hl
+fkill-cli
+git-recall
+http-server
+imagemin-cli
+live-server
+manage-wifi-cli
+netlify-cli
+now
+npm
+trash-cli
+vmd
+wifi-password-cli

@@ -35,7 +35,7 @@ if [ -L "$NVM_DIR/default-packages" ]; then
 fi
 
 echo "linking $NVM_DIR/default-packages"
-ln -s "$CONFIG_DIR/nvm-default-packages" "$NVM_DIR/default-packages"
+ln -s "$CONFIG_DIR/nvm-default-packages.txt" "$NVM_DIR/default-packages"
 
 nvm install stable
 nvm alias default stable
