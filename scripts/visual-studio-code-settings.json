@@ -1,4 +1,5 @@
 {
+  "workbench.colorTheme": "Yi Dark",
   "files.insertFinalNewline": true,
-  "workbench.colorTheme": "Yi Dark"
+  "files.trimFinalNewlines": true
 }
