@@ -7,7 +7,7 @@ echo "#############################"
 echo ""
 
 # get current location
-DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+ROOT_DIR=$1
 
 echo "installing VSCode"
 brew cask uninstall --force visual-studio-code && brew cask install visual-studio-code
@@ -17,7 +17,7 @@ if [ -L ~/Library/Application\ Support/Code/user/settings.json ]; then
   rm ~/Library/Application\ Support/Code/User/settings.json
 fi
 
-ln -s $DIR/config/visual-studio-code-settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -s $ROOT_DIR/config/visual-studio-code-settings.json ~/Library/Application\ Support/Code/User/settings.json
 
 
 
