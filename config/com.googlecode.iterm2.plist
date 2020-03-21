@@ -377,7 +377,7 @@
 	<key>NSColorPanelMode</key>
 	<string>6</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Sites</string>
+	<string>~/Sites/dotfiles/config</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -425,11 +425,11 @@
 	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
 	<string>652 663 616 174 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>2829 556 814 486 2560 180 1440 877 </string>
+	<string>269 391 814 486 0 0 1440 900 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>230 473 592 584 0 0 2560 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2560 180 1440 877 2560 180 1440 877 </string>
+	<string>320 360 1440 877 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2603 277 850 776 2560 180 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1700,7 +1700,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/stefan/Sites/dotfiles/</string>
+	<string>/Users/stefan/Sites/dotfiles/config</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>SUAutomaticallyUpdate</key>
@@ -1714,7 +1714,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-03-12T16:29:29Z</date>
+	<date>2020-03-20T20:10:45Z</date>
 	<key>SUSkippedVersion</key>
 	<string>2.9.20160313</string>
 	<key>SeparateStatusBarsPerPane</key>
