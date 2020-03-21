@@ -17,7 +17,7 @@ if [ -L ~/Library/Application\ Support/Code/user/settings.json ]; then
   rm ~/Library/Application\ Support/Code/User/settings.json
 fi
 
-ln -s $DIR/visual-studio-code-settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -s $DIR/config/visual-studio-code-settings.json ~/Library/Application\ Support/Code/User/settings.json
 
 
 
