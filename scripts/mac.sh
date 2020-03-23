@@ -79,3 +79,9 @@ defaults write com.apple.finder CreateDesktop -bool false
 
 echo "Remove delay when taking a screenshot"
 defaults write com.apple.screencapture show-thumbnail -bool false
+
+echo "Hide 'recent applications' from dock"
+defaults write com.apple.dock show-recents -bool false
+
+killall "Dock"
+
