@@ -46,3 +46,4 @@ brew install exa
 # *********************************
 # GitHub CLI
 brew install github/gh/gh
+brew install curl
