@@ -4,6 +4,7 @@ ZSH=$HOME/.oh-my-zsh
 
 export GOPATH=$HOME/.go-modules
 export EDITOR=code
+export LC_ALL=en_US.UTF-8
 
 ################################################################################
 # zsh
@@ -139,3 +140,4 @@ TWILIO_AC_ZSH_SETUP_PATH=/Users/sjudis/.twilio-cli/autocomplete/zsh_setup && tes
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /Users/sjudis/.nvm/versions/node/v12.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/sjudis/.nvm/versions/node/v12.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+export PATH="/usr/local/opt/curl/bin:$PATH"
