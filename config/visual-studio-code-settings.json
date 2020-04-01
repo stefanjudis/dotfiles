@@ -10,7 +10,7 @@
   "explorer.openEditors.visible": 0,
   "files.trimTrailingWhitespace": true,
   "files.autoSave": "onWindowChange",
-  "window.zoomLevel": -1,
+  "window.zoomLevel": 0,
   "extensions.ignoreRecommendations": false,
   "gitlens.keymap": "chorded",
   "gitlens.advanced.messages": {
@@ -48,5 +48,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.colorTheme": "Yi Dark",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true
 }
