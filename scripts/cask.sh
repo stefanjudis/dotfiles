@@ -41,5 +41,6 @@ brew cask install zoomus
 brew cask install spotify
 brew cask install ngrok
 brew cask install dashlane
+brew cask install fantastical
 # enable audio and brightness control for ext screens
 brew cask install monitorcontrol
