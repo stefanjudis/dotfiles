@@ -49,3 +49,12 @@ brew install exa
 # GitHub CLI
 brew install github/gh/gh
 brew install curl
+
+# *********************************
+# mac app store
+brew install mas
+# magnet window management
+mas install 441258766
+# dato
+mas install 1470584107
+

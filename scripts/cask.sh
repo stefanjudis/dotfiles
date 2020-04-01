@@ -42,5 +42,7 @@ brew cask install spotify
 brew cask install ngrok
 brew cask install dashlane
 brew cask install fantastical
+brew cask install bartender
+brew cask install whatsapp
 # enable audio and brightness control for ext screens
 brew cask install monitorcontrol
