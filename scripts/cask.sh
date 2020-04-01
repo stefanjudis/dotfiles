@@ -40,5 +40,6 @@ brew cask install wavebox
 brew cask install zoomus
 brew cask install spotify
 brew cask install ngrok
+brew cask install dashlane
 # enable audio and brightness control for ext screens
 brew cask install monitorcontrol
