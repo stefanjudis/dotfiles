@@ -18,7 +18,7 @@ setopt hist_ignore_all_dups
 ################################################################################
 # oh-my-zsh
 
-plugins=(git node npm github zsh-syntax-highlighting zsh-autosuggestions git-open)
+plugins=(git node npm github zsh-syntax-highlighting zsh-autosuggestions)
 ZSH_THEME="stefanjudis"
 
 # Customize history
