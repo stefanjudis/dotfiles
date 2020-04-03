@@ -83,5 +83,9 @@ defaults write com.apple.screencapture show-thumbnail -bool false
 echo "Hide 'recent applications' from dock"
 defaults write com.apple.dock show-recents -bool false
 
+echo "Show bluetooth and other in the menubar"
+defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/Displays.menu" "/System/Library/CoreServices/Menu Extras/Volume.menu"
+
+killall SystemUIServer
 killall "Dock"
 
