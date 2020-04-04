@@ -57,4 +57,5 @@ brew install mas
 mas install 441258766
 # dato
 mas install 1470584107
-
+# todoist
+mas install 585829637
