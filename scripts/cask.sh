@@ -34,6 +34,7 @@ brew install gitin
 
 brew cask install qlmarkdown
 brew cask install firefox
+brew cask install google-chrome-canary
 brew cask install iterm2
 brew cask install alfred
 brew cask install wavebox
