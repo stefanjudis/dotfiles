@@ -48,7 +48,7 @@ clone() {
 
 alias gcop='git co -p'
 alias gcop!='git co -p --amend'
-alias gcol='gitin status'
+alias gss='git status -sb'
 
 # trash
 alias t=trash
