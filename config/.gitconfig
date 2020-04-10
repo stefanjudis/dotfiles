@@ -17,6 +17,7 @@
   s = status
   b = branch
   a = add
+  sneak = commit --amend --no-edit
   log-fn = "!f() { git log -L :$1:$2; }; f"
   pr = "!f() { git fetch -fu ${2:-$(git remote |grep ^upstream || echo origin)} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
   hide = update-index --assume-unchanged
