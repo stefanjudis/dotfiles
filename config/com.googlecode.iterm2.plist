@@ -425,11 +425,11 @@
 	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
 	<string>652 663 616 174 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 391 814 486 0 0 1440 900 </string>
+	<string>2829 586 918 471 2560 180 1440 900 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>230 473 592 584 0 0 2560 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>320 360 1440 877 0 0 1440 900 </string>
+	<string>2712 355 1146 578 2560 180 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2603 277 850 776 2560 180 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1310,23 +1310,8 @@
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
 							<dict>
-								<key>algorithm</key>
-								<integer>1</integer>
 								<key>font</key>
 								<string>.SFNSText 14</string>
-								<key>separator color 2</key>
-								<dict>
-									<key>Alpha Component</key>
-									<real>1</real>
-									<key>Blue Component</key>
-									<real>0.99607843160629272</real>
-									<key>Color Space</key>
-									<string>sRGB</string>
-									<key>Green Component</key>
-									<real>0.78039216995239258</real>
-									<key>Red Component</key>
-									<real>0.3490196168422699</real>
-								</dict>
 							</dict>
 						</dict>
 					</dict>
@@ -1359,23 +1344,8 @@
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
 							<dict>
-								<key>algorithm</key>
-								<integer>1</integer>
 								<key>font</key>
 								<string>.SFNSText 14</string>
-								<key>separator color 2</key>
-								<dict>
-									<key>Alpha Component</key>
-									<real>1</real>
-									<key>Blue Component</key>
-									<real>0.99607843160629272</real>
-									<key>Color Space</key>
-									<string>sRGB</string>
-									<key>Green Component</key>
-									<real>0.78039216995239258</real>
-									<key>Red Component</key>
-									<real>0.3490196168422699</real>
-								</dict>
 							</dict>
 						</dict>
 					</dict>
@@ -1391,7 +1361,7 @@
 								<key>base: priority</key>
 								<real>5</real>
 								<key>iTermStatusBarGitComponentPollingIntervalKey</key>
-								<real>0.0</real>
+								<real>1</real>
 								<key>maxwidth</key>
 								<real>+infinity</real>
 								<key>minwidth</key>
@@ -1412,23 +1382,8 @@
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
 							<dict>
-								<key>algorithm</key>
-								<integer>1</integer>
 								<key>font</key>
 								<string>.SFNSText 14</string>
-								<key>separator color 2</key>
-								<dict>
-									<key>Alpha Component</key>
-									<real>1</real>
-									<key>Blue Component</key>
-									<real>0.99607843160629272</real>
-									<key>Color Space</key>
-									<string>sRGB</string>
-									<key>Green Component</key>
-									<real>0.78039216995239258</real>
-									<key>Red Component</key>
-									<real>0.3490196168422699</real>
-								</dict>
 							</dict>
 						</dict>
 					</dict>
@@ -1523,8 +1478,8 @@
 		</array>
 		<key>16</key>
 		<array>
-			<string>currentTab.currentSession.session.mouseReportingMode</string>
 			<string>currentTab.currentSession.user.nodeVersion</string>
+			<string>currentTab.currentSession.session.jobName</string>
 			<string>currentTab.currentSession.user.pwd</string>
 			<string>currentTab.currentSession.session.tty</string>
 			<string>currentTab.currentSession.session.username</string>
@@ -1536,6 +1491,7 @@
 			<string>currentTab.currentSession.session.path</string>
 			<string>currentTab.currentSession</string>
 			<string>currentTab.currentSession.session.lastCommand</string>
+			<string>currentTab.titleOverride</string>
 			<string>titleOverride</string>
 			<string>currentTab.currentSession.session.terminalWindowName</string>
 			<string>currentTab.currentSession.session.autoName</string>
@@ -1546,7 +1502,7 @@
 			<string>currentTab.currentSession.session.columns</string>
 			<string>currentTab.currentSession.session.terminalIconName</string>
 			<string>currentTab.currentSession.session.rows</string>
-			<string>currentTab.currentSession.session.jobName</string>
+			<string>currentTab.currentSession.session.mouseReportingMode</string>
 		</array>
 		<key>2</key>
 		<array>
@@ -1714,13 +1670,13 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-03-20T20:10:45Z</date>
+	<date>2020-03-28T10:04:01Z</date>
 	<key>SUSkippedVersion</key>
 	<string>2.9.20160313</string>
 	<key>SeparateStatusBarsPerPane</key>
 	<true/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>StatusBarPosition</key>
