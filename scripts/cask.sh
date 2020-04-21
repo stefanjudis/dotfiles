@@ -25,6 +25,8 @@ echo "installing custom fonts"
 brew tap homebrew/cask-fonts
 brew cask install font-fira-code
 brew cask install font-oswald
+# contentful slide font
+brew cask install font-muli
 
 brew cask install graphql-playground
 brew cask install typora
@@ -47,6 +49,6 @@ brew cask install bartender
 brew cask install whatsapp
 brew cask install choosy
 brew cask install rocket
-brew cask install notion
+brew cask install notion 
 # enable audio and brightness control for ext screens
 brew cask install monitorcontrol
