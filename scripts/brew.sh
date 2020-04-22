@@ -59,3 +59,5 @@ mas install 441258766
 mas install 1470584107
 # todoist
 mas install 585829637
+# NextDNS
+mas install 1464122853
