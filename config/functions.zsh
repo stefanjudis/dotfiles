@@ -64,52 +64,6 @@ function ctf_list() {
   fi
 }
 
-function update_demo_number() {
-  DATA=($(jq '.' ~/.contentfulrc.json))
-  SPACE_ID=($(echo $DATA | jq -r '.activeSpaceId'))
-  CMA_TOKEN=($(echo $DATA | jq -r '.cmaToken'))
-  CONTENT_TYPE_ID='6cMh0SuiuG3J1T4GwYdmTJ';
-  ENTRY_ID='6cMh0SuiuG3J1T4GwYdmTJ';
-
-  ENTRY_VERSION=($(curl --request GET \
-     --header "Authorization: Bearer $CMA_TOKEN" \
-     --silent \
-     https://api.contentful.com/spaces/$SPACE_ID/environments/master/entries/${ENTRY_ID} | jq ".sys.version"))
-
-  curl --request PUT \
-     --header "Authorization: Bearer $CMA_TOKEN" \
-     --header 'Content-Type: application/vnd.contentful.management.v1+json' \
-     --header "X-Contentful-Content-Type: twilioStuff" \
-     --header "X-Contentful-Version: $ENTRY_VERSION" \
-     --data-binary "{
-       \"fields\": {
-         \"title\": {
-           \"en-US\": \"Twilio Demo Stuff\"
-         },
-         \"phoneNumber\": {
-           \"en-US\": \"$1\"
-         },
-         \"currentDemo\": {
-           \"en-US\": \"$2\"
-         }
-       }
-     }" \
-     --silent \
-     https://api.contentful.com/spaces/$SPACE_ID/environments/master/entries/${ENTRY_ID} > /dev/null
-
-  ENTRY_VERSION=$((ENTRY_VERSION+1))
-
-  curl --request PUT \
-     --header "Authorization: Bearer $CMA_TOKEN" \
-     --header "X-Contentful-Version: $ENTRY_VERSION" \
-     --silent \
-     https://api.contentful.com/spaces/$SPACE_ID/environments/master/entries/$ENTRY_ID/published > /dev/null
-
-  echo;
-  echo "Go to https://tryit.now.sh and click the number. 🎉";
-  echo;
-}
-
 function prepare_video() {
   if ! [ $# -eq 2 ]; then
     echo "Wrong parameter usage: \n $ prepare_video <inputFile> <outputFileBase>"
@@ -158,15 +112,6 @@ function find_port_blocker() {
   lsof -i tcp:$1
 }
 
-# Create a git.io short URL
-gitio() {
-	if [ -z "${1}" ] || [ -z "${2}" ]; then
-		echo "Usage: \`gitio slug url\`"
-		return 1
-	fi
-	curl -i https://git.io/ -F "url=${2}" -F "code=${1}"
-}
-
 # Change MAC adress to get around public wifi limitations
 hack_the_space() {
   NEW_MAC_ADDRESS=$(openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//')
@@ -184,4 +129,16 @@ carbon() {
 # Load .env file
 loadEnv() {
   set -o allexport; source .env; set +o allexport
+}
+
+# overwrite mv command to also work with one argument
+function mv() {
+  if [ "$#" -ne 1 ] || [ ! -f "$1" ]; then
+    command mv "$@"
+    return
+  fi
+
+  newfilename="$1"
+  vared newfilename
+  command mv -v -- "$1" "$newfilename"
 }

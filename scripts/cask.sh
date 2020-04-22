@@ -46,7 +46,6 @@ brew cask install ngrok
 brew cask install dashlane
 brew cask install fantastical
 brew cask install bartender
-brew cask install whatsapp
 brew cask install choosy
 brew cask install rocket
 brew cask install notion 
