@@ -8,7 +8,9 @@ esbenp.prettier-vscode
 fabianlauer.vs-code-xml-format
 formulahendry.auto-rename-tag
 jeremyljackson.vs-docblock
+mikestead.dotenv
 octref.vetur
+okitavera.vscode-nunjucks-formatter
 pflannery.vscode-versionlens
 rebornix.project-snippets
 ronnidc.nunjucks
