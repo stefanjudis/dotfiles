@@ -31,7 +31,7 @@ brew install exa
 # GitHub CLI
 brew install github/gh/gh
 brew install curl
-
+brew install git-delta
 brew install go
 
 # *********************************

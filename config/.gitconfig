@@ -29,10 +29,10 @@
 [core]
   editor = vim
   excludesfile = /Users/stefanjudis/.gitignore_global
+  pager = delta --plus-color="#195019" --minus-color="#601919" --paging=always
 [push]
   default = current
-[color "diff"]
-  old = red strike
-  new = green italic
 [help]
-	autocorrect = 40
+  autocorrect = 40
+[interactive]
+  diffFilter = delta --plus-color="#195019" --minus-color="#601919" --color-only
