@@ -132,10 +132,6 @@ fi
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 ################################################################################
-# twilio autocomplete setup
-TWILIO_AC_ZSH_SETUP_PATH=/Users/sjudis/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH;
-
-################################################################################
 # serverless
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
