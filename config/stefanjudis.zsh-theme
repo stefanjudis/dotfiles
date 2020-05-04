@@ -7,4 +7,4 @@ PROMPT='
 %{$reset_color%})
 ${PS1_EMOJIS[$RANDOM % $NUMBER_OF_EMOJIS]}  $THEME_DELIMITER '
 
-RPROMPT='%{$fg_bold[blue]%}[%*]%{$reset_color%}'
+RPROMPT='%{$fg_bold[blue]%}🕐 %*%{$reset_color%}'
