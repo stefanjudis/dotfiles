@@ -1,4 +1,4 @@
-export PATH=:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.go-modules/bin:$PATH
+export PATH=:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.go-modules/bin:/usr/local/opt/curl/bin:$PATH
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -131,9 +131,3 @@ fi
 # autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
-################################################################################
-# serverless
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/sjudis/.nvm/versions/node/v12.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/sjudis/.nvm/versions/node/v12.4.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-export PATH="/usr/local/opt/curl/bin:$PATH"
