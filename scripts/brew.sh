@@ -33,6 +33,7 @@ brew install github/gh/gh
 brew install curl
 brew install git-delta
 brew install go
+brew install notion
 
 # *********************************
 # mac app store
