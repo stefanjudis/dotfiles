@@ -36,7 +36,6 @@ brew install gitin
 
 brew cask install qlmarkdown
 brew cask install firefox
-brew cask install google-chrome-canary
 brew cask install iterm2
 brew cask install alfred
 brew cask install wavebox
@@ -44,10 +43,8 @@ brew cask install zoomus
 brew cask install spotify
 brew cask install ngrok
 brew cask install dashlane
-brew cask install fantastical
 brew cask install bartender
 brew cask install choosy
 brew cask install rocket
-brew cask install notion 
-# enable audio and brightness control for ext screens
+brew cask install notion
 brew cask install monitorcontrol

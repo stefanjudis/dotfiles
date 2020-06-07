@@ -1,42 +1,38 @@
 #!/usr/bin/env sh
 
-brew -v >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-
 echo "#############################"
 echo "# Installing various programs from brew"
 echo "#############################"
-echo "\n"
+echo ""
 
-brew install zsh zsh-completions
+ROOT_DIR=$1
+source "$ROOT_DIR/commands/__util.sh"
+
+brew -v >/dev/null 2>&1 || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+brew_install_or_upgrade zsh
+brew_install_or_upgrade zsh-completions
+
 # set it as default shell
 chsh -s /bin/zsh
 
-brew unlink highlight
-brew install highlight
-brew install jq
-# Quick Look plugins
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package quicklookase qlvideo
+brew_install_or_upgrade highlight
+brew_install_or_upgrade jq
+brew_install_or_upgrade bat
+brew_install_or_upgrade autojump
+brew_install_or_upgrade exa
+brew_install_or_upgrade github/gh/gh
+brew_install_or_upgrade curl
+brew_install_or_upgrade git-delta
+brew_install_or_upgrade go
+brew_install_or_upgrade shellcheck
+
 # ffmpeg for quick video compression
-brew install ffmpeg --with-vpx --with-vorbis --with-libvorbis --with-vorbis --with-theora --with-libogg --with-libvorbis --with-gpl --with-version3 --with-nonfree --with-postproc --with-libaacplus --with-libass --with-libcelt --with-libfaac --with-libfdk-aac --with-libfreetype --with-libmp3lame --with-libopencore-amrnb --with-libopencore-amrwb --with-libopenjpeg --with-openssl --with-libopus --with-libschroedinger --with-libspeex --with-libtheora --with-libvo-aacenc --with-libvorbis --with-libvpx --with-libx264 --with-libxvid
-
-# a better `cat`
-brew install bat
-
-# a better `cd`
-brew install autojump
-
-# a better `ll`
-brew install exa
-
-# GitHub CLI
-brew install github/gh/gh
-brew install curl
-brew install git-delta
-brew install go
+brew install ffmpeg --with-vorbis --with-libvorbis --with-vorbis --with-theora --with-libogg --with-libvorbis --with-gpl --with-version3 --with-nonfree --with-postproc --with-libaacplus --with-libass --with-libcelt --with-libfaac --with-libfdk-aac --with-libfreetype --with-libmp3lame --with-libopencore-amrnb --with-libopencore-amrwb --with-libopenjpeg --with-openssl --with-libopus --with-libschroedinger --with-libspeex --with-libtheora --with-libvo-aacenc --with-libvorbis --with-libvpx --with-libx264 --with-libxvid
 
 # *********************************
 # mac app store
-brew install mas
+brew_install_or_upgrade mas
 # magnet window management
 mas install 441258766
 # dato

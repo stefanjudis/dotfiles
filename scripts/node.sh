@@ -1,13 +1,13 @@
-#!/bin/bash
-
-ROOT_DIR=$1
-CONFIG_DIR="$ROOT_DIR/config"
+#!/usr/bin/env sh
 
 echo ""
 echo "#############################"
 echo "# Running global npm setup from npm.sh"
 echo "#############################"
 echo ""
+
+ROOT_DIR=$1
+CONFIG_DIR="$ROOT_DIR/config"
 
 # *************************************
 # node
@@ -35,7 +35,7 @@ if [ -L "$NVM_DIR/default-packages" ]; then
 fi
 
 echo "linking $NVM_DIR/default-packages"
-ln -s "$CONFIG_DIR/nvm-default-packages.txt" "$NVM_DIR/default-packages"
+ln -s "$CONFIG_DIR/package-lists/nvm-default-packages.txt" "$NVM_DIR/default-packages"
 
 nvm install stable
 nvm alias default stable

@@ -15,6 +15,7 @@ pflannery.vscode-versionlens
 rebornix.project-snippets
 ronnidc.nunjucks
 teabyii.ayu
+timonwong.shellcheck
 WallabyJs.quokka-vscode
 wangweixuan.yithemes
 wix.vscode-import-cost
