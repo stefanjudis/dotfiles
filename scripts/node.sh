@@ -23,7 +23,7 @@ LATEST_NVM_TAG=$(get_latest_release "nvm-sh/nvm")
 
 echo "installing node via nvm ($LATEST_NVM_TAG)"
 curl -o- "https://raw.githubusercontent.com/nvm-sh/nvm/$LATEST_NVM_TAG/install.sh" | bash
-echo $'installed nvm\n'
+printf "installed nvm\n"
 
 # loading nvm for now
 export NVM_DIR="$HOME/.nvm"
@@ -41,5 +41,5 @@ nvm install stable
 nvm alias default stable
 nvm use stable
 
-echo $'updating npm\n'
+printf "updating npm\n"
 npm i -g npm
