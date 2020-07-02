@@ -14,6 +14,7 @@ okitavera.vscode-nunjucks-formatter
 pflannery.vscode-versionlens
 rebornix.project-snippets
 ronnidc.nunjucks
+sleistner.vscode-fileutils
 teabyii.ayu
 timonwong.shellcheck
 WallabyJs.quokka-vscode
