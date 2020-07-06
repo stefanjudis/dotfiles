@@ -17,6 +17,7 @@
   s = status
   ss = select
   b = branch
+  db = delete-branch
   a = add
   sneak = commit --amend --no-edit
   log-fn = "!f() { git log -L :$1:$2; }; f"

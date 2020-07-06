@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+if [ -z "$1" ]; then
+  echo "Error: Please define the branch name -> git delete-branch branch-name"
+  exit 1
+fi
+
+git branch -d "$1"
+git push origin --delete "$1"
