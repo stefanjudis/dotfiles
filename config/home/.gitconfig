@@ -15,6 +15,7 @@
   cp = commit -p
   ch = checkout
   s = status
+  ss = select
   b = branch
   a = add
   sneak = commit --amend --no-edit

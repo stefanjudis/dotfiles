@@ -1,4 +1,4 @@
-export PATH=:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.go-modules/bin:/usr/local/opt/curl/bin:$PATH
+export PATH=:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.bin:$HOME/.go-modules/bin:/usr/local/opt/curl/bin:$PATH
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 

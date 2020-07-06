@@ -34,17 +34,7 @@ alias npm-reset='rm -rf node_modules && rm -f package-lock.json && npm install &
 alias dnm='rm -rf node_modules && npm i'
 
 
-# git handling
-clone() {
-  git clone $1
-  cd $(basename ${1%.*})
-  if test -f "./package.json"; then
-    echo "..."
-    echo "Found package.json... installing dependencies"
-    echo "..."
-    npm install
-  fi
-}
+
 
 alias gcop='git co -p'
 alias gcop!='git co -p --amend'
@@ -59,8 +49,3 @@ alias freewifi="sudo ifconfig en0 ether `openssl rand -hex 6 | sed 's/\(..\)/\1:
 alias p='cd ~/Projects/'
 alias d='cd ~/Downloads/'
 alias sj='cd ~/Projects/stefan-judis-website/'
-
-# create files in subfolders
-function touchp() {
-  mkdir -p "$(dirname "$1")/" && touch "$1"
-}

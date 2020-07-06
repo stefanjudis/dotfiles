@@ -81,3 +81,20 @@ function mv() {
   vared newfilename
   command mv -v -- "$1" "$newfilename"
 }
+
+# create files in subfolders
+function touchp() {
+  mkdir -p "$(dirname "$1")/" && touch "$1"
+}
+
+# git handling
+function clone() {
+  git clone $1
+  cd $(basename ${1%.*})
+  if test -f "./package.json"; then
+    echo "..."
+    echo "Found package.json... installing dependencies"
+    echo "..."
+    npm install
+  fi
+}
