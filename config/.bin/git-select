@@ -7,7 +7,7 @@ if [ -d "./.git" ]; then
     branch_name="${selected_branch%% *}"
     git checkout "$branch_name"
   else
-    echo "Exit: You haven't selected a branch"
+    echo "Exit: You haven't selected a branch..."
   fi
 else
   echo "Error: There's no .git dir..."
