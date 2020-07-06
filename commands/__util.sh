@@ -5,9 +5,9 @@ function symlink_files() {
   do
     if [ -f "$FILE" ]; then
       echo "Processing $FILE file"
-      FILE_NAME=$(basename -- $FILE)
+      FILE_NAME=$(basename -- "$FILE")
 
-      if [ -L $2/$FILE_NAME ] | [ -f $2/$FILE_NAME ]; then
+      if [ -L "$2/$FILE_NAME" ]; then
         echo "found old $2/$FILE_NAME - removing ..."
         rm "$2/$FILE_NAME"
       fi
