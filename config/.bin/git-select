@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 if [ -d "./.git" ]; then
-  selected_branch=$(git branch -avv | fzf | sed -e 's/^[[:space:]]*//')
+  selected_branch=$(git branch -vv | fzf | sed -e 's/^[[:space:]]*//')
 
   if [ -n "$selected_branch" ]; then
     branch_name="${selected_branch%% *}"
