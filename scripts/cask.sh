@@ -11,6 +11,7 @@ ROOT_DIR=$1
 
 echo "installing VSCode"
 brew cask uninstall --force visual-studio-code && brew cask install visual-studio-code
+brew cask uninstall --force visual-studio-code-insiders && brew cask install visual-studio-code-insiders
 
 if [ -L ~/Library/Application\ Support/Code/user/settings.json ]; then
   echo "found old visual studio code settings. removing..."
