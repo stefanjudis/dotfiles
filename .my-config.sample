@@ -1,2 +1,4 @@
-GH_USERNAME="stefanjudis"
-GH_ACCESS_TOKEN="..."
+#!/usr/bin/env sh
+
+export GH_USERNAME="stefanjudis"
+export GH_ACCESS_TOKEN="..."
