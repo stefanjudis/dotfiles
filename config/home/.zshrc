@@ -7,6 +7,10 @@ export EDITOR=code
 export LC_ALL=en_US.UTF-8
 
 ################################################################################
+# private
+source ~/.my-config.sh
+
+################################################################################
 # zsh
 unsetopt RM_STAR_SILENT
 setopt RM_STAR_WAIT

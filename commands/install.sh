@@ -9,7 +9,12 @@ source "$ROOT_DIR/commands/__util.sh"
 
 echo "Running commands/install.sh..."
 
-
+# **********************************
+# link private keys
+#
+FROM_FILES="$ROOT_DIR/.my-config.sh"
+TARGET_DIR=~
+symlink_files "$FROM_FILES" "$TARGET_DIR"
 
 # **********************************
 # root config files (.gitconfig, .npmrc, ...)
