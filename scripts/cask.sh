@@ -36,8 +36,12 @@ brew tap jeroenknoops/tap
 brew install gitin
 
 brew cask install qlmarkdown
+brew cask install google-chrome
 brew cask install firefox
 brew cask install iterm2
+# install iterm utilities right away
+curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
+
 brew cask install alfred
 brew cask install wavebox
 brew cask install zoomus
