@@ -89,3 +89,8 @@ defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreS
 killall SystemUIServer
 killall "Dock"
 
+echo "Only show active apps in dock"
+defaults write com.apple.dock static-only -bool true; killall Dock
+
+echo "Disable CMD+space for spotlight"
+/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.symbolichotkeys.plist -c "Set AppleSymbolicHotKeys:64:enabled false"
