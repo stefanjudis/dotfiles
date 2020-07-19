@@ -80,17 +80,20 @@ defaults write com.apple.finder CreateDesktop -bool false
 echo "Remove delay when taking a screenshot"
 defaults write com.apple.screencapture show-thumbnail -bool false
 
+echo "Store screenshots in /tmp"
+defaults write com.apple.screencapture location /tmp
+
 echo "Hide 'recent applications' from dock"
 defaults write com.apple.dock show-recents -bool false
 
 echo "Show bluetooth and other in the menubar"
 defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/Displays.menu" "/System/Library/CoreServices/Menu Extras/Volume.menu"
 
-killall SystemUIServer
-killall "Dock"
-
 echo "Only show active apps in dock"
 defaults write com.apple.dock static-only -bool true; killall Dock
 
 echo "Disable CMD+space for spotlight"
 /usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.symbolichotkeys.plist -c "Set AppleSymbolicHotKeys:64:enabled false"
+
+killall SystemUIServer
+killall "Dock"
