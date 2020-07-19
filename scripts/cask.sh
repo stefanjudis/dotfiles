@@ -26,6 +26,7 @@ echo "installing custom fonts"
 brew tap homebrew/cask-fonts
 brew cask install font-fira-code
 brew cask install font-oswald
+brew cask install font-ubuntu
 # contentful slide font
 brew cask install font-muli
 
