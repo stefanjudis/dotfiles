@@ -98,3 +98,10 @@ function clone() {
     npm install
   fi
 }
+
+function open-gql-playground() {
+  local ENDPOINT=$1
+  local AUTH_TOKEN=$2
+
+  open "graphql-playground://endpoint=$ENDPOINT?headers={\"Authorization\": \"Bearer $AUTH_TOKEN\"}"
+}
