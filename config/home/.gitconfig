@@ -36,3 +36,5 @@
   diffFilter = delta --plus-color="#195019" --minus-color="#601919" --color-only
 [commit]
 	verbose = true
+[init]
+	defaultBranch = main
