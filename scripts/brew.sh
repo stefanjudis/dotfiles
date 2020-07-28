@@ -23,6 +23,7 @@ brew_install_or_upgrade autojump
 brew_install_or_upgrade exa
 brew_install_or_upgrade github/gh/gh
 brew_install_or_upgrade curl
+brew_install_or_upgrade git
 brew_install_or_upgrade git-delta
 brew_install_or_upgrade go
 brew_install_or_upgrade shellcheck
