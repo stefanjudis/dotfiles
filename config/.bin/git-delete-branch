@@ -1,9 +1,12 @@
 #!/usr/bin/env sh
 
 if [ -z "$1" ]; then
-  echo "Error: Please define the branch name -> git delete-branch branch-name"
-  exit 1
+  headline="Current branch: $(git branch --show-current)"
+  branches=$(git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format="%(refname:short)") &&
+  branch=$(echo "$branches" | fzf --multi --header="$headline") &&
+  git branch -D "$(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")"
+else
+  git branch -D "$1"
+  git push origin --delete "$1"
 fi
 
-git branch -d "$1"
-git push origin --delete "$1"
