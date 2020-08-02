@@ -19,6 +19,10 @@ function symlink_files() {
   done
 }
 
+function symlink() {
+  ln -s "$1" "$2";
+}
+
 log_section_start() {
   echo ""
   echo ""

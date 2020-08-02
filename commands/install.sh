@@ -39,14 +39,11 @@ curl -L https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.
 # executables
 #
 
-FROM_FILES="$CONFIG_DIR/.bin/*"
+FROM_DIR="$CONFIG_DIR/.bin"
 TARGET_DIR=~/.bin
-log_section_start "Sym linking files from $FROM_FILES to $TARGET_DIR"
+log_section_start "Sym linking $FROM_DIR to $TARGET_DIR"
 
-if [ -n "$TARGET_DIR" ]; then
-  mkdir $TARGET_DIR
-fi
-symlink_files "$FROM_FILES" "$TARGET_DIR"
+symlink "$FROM_DIR" "$TARGET_DIR"
 
 # *************************************
 # oh-my-zsh
