@@ -58,7 +58,7 @@ function find_port_blocker() {
 }
 
 # Change MAC adress to get around public wifi limitations
-hack_the_space() {
+function hack_the_space() {
   NEW_MAC_ADDRESS=$(openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//')
   echo $NEW_MAC_ADDRESS
   sudo ifconfig en0 ether "$NEW_MAC_ADDRESS"
@@ -66,7 +66,7 @@ hack_the_space() {
 }
 
 # Load .env file
-loadEnv() {
+function loadEnv() {
   set -o allexport; source .env; set +o allexport
 }
 
