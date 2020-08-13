@@ -20,7 +20,7 @@ fi
 
 ln -s $ROOT_DIR/config/visual-studio-code-settings.json ~/Library/Application\ Support/Code/User/settings.json
 
-
+brew tap homebrew/cask-versions
 
 echo "installing custom fonts"
 brew tap homebrew/cask-fonts
@@ -38,6 +38,7 @@ brew install gitin
 
 brew cask install qlmarkdown
 brew cask install google-chrome
+brew cask install google-chrome-canary
 brew cask install firefox
 brew cask install iterm2
 # install iterm utilities right away
