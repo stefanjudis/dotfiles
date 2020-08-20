@@ -40,6 +40,7 @@ brew cask install qlmarkdown
 brew cask install google-chrome
 brew cask install google-chrome-canary
 brew cask install firefox
+brew cask install firefox-nightly
 brew cask install iterm2
 # install iterm utilities right away
 curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
