@@ -3,6 +3,10 @@ function f() {
   find . -name "$1"
 }
 
+cd(){
+  [[ -t 1 && $((RANDOM%20)) -eq 0 ]] && echo " -> 🐶 \"woof\""; builtin cd "$@";
+} 
+
 # quickly look up a folder
 # grep-folder perf-*
 function grep-folder() {
