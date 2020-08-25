@@ -1,11 +1,17 @@
 #!/usr/bin/env sh
 
 if [ -d "./.git" ]; then
-  selected_branch=$(git branch -vv | fzf | sed -e 's/^[[:space:]]*//')
+  git fetch
+  selected_remote_branch=$(git branch -r | fzf | sed -e 's/^[[:space:]]*//')
 
-  if [ -n "$selected_branch" ]; then
-    branch_name="${selected_branch%% *}"
-    git checkout "$branch_name"
+  if [ -n "$selected_remote_branch" ]; then
+    selected_branch=$(echo "$selected_remote_branch" | sed -e 's/origin\///');
+
+    if git rev-parse --verify "$selected_branch"; then
+      git checkout "$selected_branch"
+    else
+      git checkout --track "$selected_remote_branch"
+    fi
   else
     echo "Exit: You haven't selected a branch..."
   fi
