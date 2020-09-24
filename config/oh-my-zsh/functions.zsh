@@ -5,7 +5,7 @@ function f() {
 
 cd(){
   [[ -t 1 && $((RANDOM%20)) -eq 0 ]] && echo " -> 🐶 \"woof\""; builtin cd "$@";
-} 
+}
 
 # quickly look up a folder
 # grep-folder perf-*
@@ -108,4 +108,8 @@ function open-gql-playground() {
   local AUTH_TOKEN=$2
 
   open "graphql-playground://endpoint=$ENDPOINT?headers={\"Authorization\": \"Bearer $AUTH_TOKEN\"}"
+}
+
+function npm-diff() {
+  command npm-diff $1 $2 $3 | delta --width $(tput cols) | less
 }

@@ -39,6 +39,9 @@
 [init]
   defaultBranch = main
 [pull]
-	rebase = false
+  rebase = false
 [fetch]
-	prune = true
+  prune = true
+[delta]
+  side-by-side = true
+
