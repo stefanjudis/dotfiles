@@ -74,6 +74,19 @@ function loadEnv() {
   set -o allexport; source .env; set +o allexport
 }
 
+function loadEnvLocal() {
+  set -o allexport; source .env.local; set +o allexport
+}
+
+function diff() {
+  if [ "$#" -ne 2 ]; then
+    command diff "$@"
+    return
+  fi
+
+  git diff --no-index $1 $2;
+}
+
 # overwrite mv command to also work with one argument
 function mv() {
   if [ "$#" -ne 1 ] || [ ! -f "$1" ]; then
