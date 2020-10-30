@@ -36,6 +36,10 @@ alias dnm='rm -rf node_modules && npm i'
 alias gcop='git co -p'
 alias gcop!='git co -p --amend'
 
+alias mv="mv -iv"
+alias cp="cp -irv"
+alias mkdir="mkdir -iv"
+
 # trash
 alias t=trash
 
