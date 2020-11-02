@@ -13,3 +13,4 @@ trash-cli
 vmd
 wifi-password-cli
 npm-diff
+vdx
