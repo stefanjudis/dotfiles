@@ -71,11 +71,8 @@ function hack_the_space() {
 
 # Load .env file
 function loadEnv() {
-  set -o allexport; source .env; set +o allexport
-}
-
-function loadEnvLocal() {
-  set -o allexport; source .env.local; set +o allexport
+  set -o allexport; source $1; set +o allexport
+  printf "Loaded vars in $1"
 }
 
 function diff() {
@@ -108,6 +105,7 @@ function touchp() {
 function clone() {
   git clone $1
   cd $(basename ${1%.*})
+
   if test -f "./package.json"; then
     echo "..."
     echo "Found package.json... installing dependencies"
