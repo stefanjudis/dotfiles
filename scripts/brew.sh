@@ -42,8 +42,6 @@ brew install ffmpeg --with-vorbis --with-libvorbis --with-vorbis --with-theora -
 brew_install_or_upgrade mas
 # magnet window management
 mas install 441258766
-# dato
-mas install 1470584107
 # todoist
 mas install 585829637
 # NextDNS

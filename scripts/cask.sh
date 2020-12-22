@@ -54,6 +54,5 @@ brew cask install dashlane
 brew cask install bartender
 brew cask install choosy
 brew cask install rocket
-brew cask install notion
 brew cask install monitorcontrol
 brew cask install screenflow
