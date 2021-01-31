@@ -46,3 +46,5 @@ mas install 441258766
 mas install 585829637
 # NextDNS
 mas install 1464122853
+# Meeting Bar
+mas install 1532419400
