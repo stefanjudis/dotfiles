@@ -122,5 +122,5 @@ function open-gql-playground() {
 }
 
 function npm-diff() {
-  command npm-diff $1 $2 $3 | delta --width $(tput cols) | less
+  npm diff --diff=$1@$2 --diff=$1@$3 | delta --width $(tput cols) | less
 }
