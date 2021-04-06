@@ -24,3 +24,4 @@ xabikos.JavaScriptSnippets
 iocave.monkey-patch
 iocave.customize-ui
 ChakrounAnas.turbo-console-log
+anteprimorac.html-end-tag-labels
