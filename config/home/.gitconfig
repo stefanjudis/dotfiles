@@ -22,7 +22,7 @@
   sneak = commit --amend --no-edit
   log-fn = "!f() { git log -L :$1:$2; }; f"
   pr = "!f() { git fetch -fu ${2:-$(git remote |grep ^upstream || echo origin)} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
-  zup = for-each-ref --sort='authordate:iso8601' --format=' %(refname:short) %(color:green)%(authordate:relative) %(color:white)(%(contents:subject))' refs/heads
+  investigate = blame
 [mergetool]
   keepBackup = true
 [core]
