@@ -6,7 +6,7 @@ export GOPATH=$HOME/.go-modules
 export EDITOR=code
 export LC_ALL=en_US.UTF-8
 
-export ZSH_PLUGINS_ALIAS_TIPS_TEXT="❗ "
+export ZSH_PLUGINS_ALIAS_TIPS_TEXT="❗ Use the alias: "
 
 ################################################################################
 # private
