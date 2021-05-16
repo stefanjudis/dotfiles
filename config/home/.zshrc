@@ -6,6 +6,8 @@ export GOPATH=$HOME/.go-modules
 export EDITOR=code
 export LC_ALL=en_US.UTF-8
 
+export ZSH_PLUGINS_ALIAS_TIPS_TEXT="❗ "
+
 ################################################################################
 # private
 source ~/.my-config.sh
@@ -22,7 +24,7 @@ setopt hist_ignore_all_dups
 ################################################################################
 # oh-my-zsh
 
-plugins=(git node npm github zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git node npm github zsh-syntax-highlighting zsh-autosuggestions alias-tips)
 ZSH_THEME="stefanjudis"
 
 # Customize history
