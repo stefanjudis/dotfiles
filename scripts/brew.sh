@@ -27,10 +27,10 @@ brew_install_or_upgrade go
 brew_install_or_upgrade shellcheck
 brew_install_or_upgrade fzf
 brew_install_or_upgrade coreutils
-brew install_or_upgrade nektos/tap/act
-brew install_or_upgrade docker
-brew install_or_upgrade docker-machine
-brew install_or_upgrade git-lfs
+brew_install_or_upgrade nektos/tap/act
+brew_install_or_upgrade docker
+brew_install_or_upgrade docker-machine
+brew_install_or_upgrade git-lfs
 
 # rust based tools
 brew_install_or_upgrade bat
