@@ -126,8 +126,8 @@ function npm-diff() {
 }
 
 function dev() {
-  echo "Running 'npm run dev' in $1 ...";
-  cd ~/Projects/"$1" || return;
+  echo "Running 'npm run dev' in $1 ..."
+  cd ~/Projects/"$1" || return
   code .
   npm run dev
 }
