@@ -26,8 +26,6 @@ log_section_start "Sym linking files from $FROM_FILES to $TARGET_DIR"
 
 symlink_files "$FROM_FILES" "$TARGET_DIR"
 
-
-
 # **********************************
 # iTerm stuff
 #
@@ -58,23 +56,21 @@ fi
 
 RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+FROM_DIR="$CONFIG_DIR/oh-my-zsh"
+TARGET_DIR=~/.oh-my-zsh/custom/
+symlink_files "$FROM_DIR/*" "$TARGET_DIR"
+# I resure the `completion` directory that's automatically loaded
+mkdir ~/.oh-my-zsh/completions
+symlink_files "$FROM_DIR/completions/*" ~/.oh-my-zsh/completions
+
 echo "Installing zsh-syntax-highlighting"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 echo "Installing zsh-autosuggestions"
-git clone git://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
 echo "Installing alias-tips"
-git clone git@github.com:djui/alias-tips.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/alias-tips
-
-# *************************************
-# oh-my-zsh config files
-#
-
-FROM_FILES="$CONFIG_DIR/oh-my-zsh/*"
-TARGET_DIR=~/.oh-my-zsh/custom/
-log_section_start "Sym linking files from $FROM_FILES to $TARGET_DIR"
-symlink_files "$FROM_FILES" "$TARGET_DIR"
+git clone git@github.com:djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
 
 # *************************************
 # Other scripts

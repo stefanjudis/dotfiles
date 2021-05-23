@@ -124,3 +124,10 @@ function open-gql-playground() {
 function npm-diff() {
   npm diff --diff=$1@$2 --diff=$1@$3 | delta --width $(tput cols) | less
 }
+
+function dev() {
+  echo "Running 'npm run dev' in $1 ...";
+  cd ~/Projects/"$1" || return;
+  code .
+  npm run dev
+}

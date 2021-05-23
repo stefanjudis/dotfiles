@@ -5,7 +5,6 @@ ZSH=$HOME/.oh-my-zsh
 export GOPATH=$HOME/.go-modules
 export EDITOR=code
 export LC_ALL=en_US.UTF-8
-
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT='❗  Use the alias: '
 
 ################################################################################
@@ -137,4 +136,3 @@ fi
 ################################################################################
 # autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-
