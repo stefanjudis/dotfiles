@@ -48,3 +48,5 @@ mas install 1470584107
 mas install 585829637
 # NextDNS
 mas install 1464122853
+# Clocker
+mas install id1056643111
