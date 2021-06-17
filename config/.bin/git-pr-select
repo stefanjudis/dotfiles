@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+if [ -d "./.git" ]; then
+  id="$(gh pr list -L100 | fzf | cut -f1)";
+  [ -n "$id" ] && gh pr checkout "$id"
+else
+  echo "Error: There's no .git dir..."
+  exit 1
+fi

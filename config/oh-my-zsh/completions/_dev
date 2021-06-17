@@ -1,0 +1,26 @@
+#compdef dev
+
+# Cache the parsing of the projects directory for repeated use
+# The first auto completion for `dev` will be slow
+#   because all projects have to be scanned.
+# After the first run it's speedy
+__DIRS_WITH_DEV_COMMAND=()
+
+function _dev() {
+  if [ ${#__DIRS_WITH_DEV_COMMAND[@]} -eq 0 ]; then
+    # iterate over directory including all coding projects
+    for i in ~/Projects/*; do
+      if [ -f "$i/package.json" ]; then
+        # parse the package.json and see if `npm run dev` is available
+        DEV_COMMAND=$(jq ".scripts.dev" < "$i/package.json")
+
+        if [ "$DEV_COMMAND" != "null" ]; then
+          __DIRS_WITH_DEV_COMMAND+=("$(basename "$i")")
+        fi
+      fi
+    done
+  fi
+
+  # set auto completion result
+  _describe 'command' __DIRS_WITH_DEV_COMMAND
+}

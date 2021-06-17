@@ -17,8 +17,11 @@ ronnidc.nunjucks
 sleistner.vscode-fileutils
 teabyii.ayu
 timonwong.shellcheck
-WallabyJs.quokka-vscode
 wangweixuan.yithemes
 wix.vscode-import-cost
 wmaurer.change-case
 xabikos.JavaScriptSnippets
+iocave.monkey-patch
+iocave.customize-ui
+ChakrounAnas.turbo-console-log
+anteprimorac.html-end-tag-labels

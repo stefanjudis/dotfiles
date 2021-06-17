@@ -1,10 +1,11 @@
-export PATH=:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.bin:$HOME/.go-modules/bin:/usr/local/opt/curl/bin:$PATH
+export PATH=:/usr/local/bin:/usr/local/sbin:$HOME/bin:$HOME/.bin:$HOME/.go-modules/bin:/usr/local/opt/curl/bin:$HOME/.iterm2:$PATH
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
 export GOPATH=$HOME/.go-modules
 export EDITOR=code
 export LC_ALL=en_US.UTF-8
+export ZSH_PLUGINS_ALIAS_TIPS_TEXT='❗  Use the alias: '
 
 ################################################################################
 # private
@@ -22,7 +23,7 @@ setopt hist_ignore_all_dups
 ################################################################################
 # oh-my-zsh
 
-plugins=(git node npm github zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git node npm github zsh-syntax-highlighting zsh-autosuggestions alias-tips)
 ZSH_THEME="stefanjudis"
 
 # Customize history
@@ -38,6 +39,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # set variables for iterm status bar
 iterm2_print_user_vars() {
+  it2git
   iterm2_set_user_var nodeVersion $(node -v)
   iterm2_set_user_var pwd $(pwd)
 }
@@ -134,4 +136,3 @@ fi
 ################################################################################
 # autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-

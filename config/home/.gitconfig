@@ -22,6 +22,7 @@
   sneak = commit --amend --no-edit
   log-fn = "!f() { git log -L :$1:$2; }; f"
   pr = "!f() { git fetch -fu ${2:-$(git remote |grep ^upstream || echo origin)} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+  investigate = blame
 [mergetool]
   keepBackup = true
 [core]
@@ -38,3 +39,10 @@
   verbose = true
 [init]
   defaultBranch = main
+[pull]
+  rebase = false
+[fetch]
+  prune = true
+[delta]
+  side-by-side = true
+

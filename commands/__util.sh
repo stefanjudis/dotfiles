@@ -1,6 +1,8 @@
 #!/bin/bash
 
 function symlink_files() {
+  echo "**** Sym linking files from $1 to $2"
+
   for FILE in $1
   do
     if [ -f "$FILE" ]; then

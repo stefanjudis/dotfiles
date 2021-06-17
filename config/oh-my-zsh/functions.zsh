@@ -5,7 +5,7 @@ function f() {
 
 cd(){
   [[ -t 1 && $((RANDOM%20)) -eq 0 ]] && echo " -> 🐶 \"woof\""; builtin cd "$@";
-} 
+}
 
 # quickly look up a folder
 # grep-folder perf-*
@@ -71,7 +71,17 @@ function hack_the_space() {
 
 # Load .env file
 function loadEnv() {
-  set -o allexport; source .env; set +o allexport
+  set -o allexport; source $1; set +o allexport
+  printf "Loaded vars in $1"
+}
+
+function diff() {
+  if [ "$#" -ne 2 ]; then
+    command diff "$@"
+    return
+  fi
+
+  git diff --no-index $1 $2;
 }
 
 # overwrite mv command to also work with one argument
@@ -95,6 +105,7 @@ function touchp() {
 function clone() {
   git clone $1
   cd $(basename ${1%.*})
+
   if test -f "./package.json"; then
     echo "..."
     echo "Found package.json... installing dependencies"
@@ -108,4 +119,15 @@ function open-gql-playground() {
   local AUTH_TOKEN=$2
 
   open "graphql-playground://endpoint=$ENDPOINT?headers={\"Authorization\": \"Bearer $AUTH_TOKEN\"}"
+}
+
+function npm-diff() {
+  npm diff --diff=$1@$2 --diff=$1@$3 | delta --width $(tput cols) | less
+}
+
+function dev() {
+  echo "Running 'npm run dev' in $1 ..."
+  cd ~/Projects/"$1" || return
+  code .
+  npm run dev
 }
