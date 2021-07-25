@@ -139,11 +139,11 @@ function extract-text-from-image() {
     return 1;
   fi
 
-  TARGET_DIR=$(dirname $1);
+  TARGET_DIR=$(dirname "$1");
   FILENAME=$(basename -- "$1")
   FILENAME_WITHOUT_EXTENSION="${FILENAME%.*}"
 
-  tesseract $1 "$TARGET_DIR/$FILENAME_WITHOUT_EXTENSION" -l eng txt
-  cat "$TARGET_DIR/$FILENAME_WITHOUT_EXTENSION.txt" | pbcopy
+  tesseract "$1" "$TARGET_DIR/$FILENAME_WITHOUT_EXTENSION" -l eng txt
+  pbcopy < "$TARGET_DIR/$FILENAME_WITHOUT_EXTENSION.txt"
   echo "🎉 Text copied to clipboard!"
 }
