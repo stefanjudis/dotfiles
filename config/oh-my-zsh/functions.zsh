@@ -131,3 +131,19 @@ function dev() {
   code .
   npm run dev
 }
+
+function extract-text-from-image() {
+  if [ $# -eq 0 ]; then
+    echo "Please specify the file you want to scan.";
+    echo "  -> extract-text-from-image /some/path/image.png";
+    return 1;
+  fi
+
+  TARGET_DIR=$(dirname $1);
+  FILENAME=$(basename -- "$1")
+  FILENAME_WITHOUT_EXTENSION="${FILENAME%.*}"
+
+  tesseract $1 "$TARGET_DIR/$FILENAME_WITHOUT_EXTENSION" -l eng txt
+  cat "$TARGET_DIR/$FILENAME_WITHOUT_EXTENSION.txt" | pbcopy
+  echo "🎉 Text copied to clipboard!"
+}
