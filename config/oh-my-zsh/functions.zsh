@@ -145,5 +145,6 @@ function extract-text-from-image() {
 
   tesseract "$1" "$TARGET_DIR/$FILENAME_WITHOUT_EXTENSION" -l eng txt
   pbcopy < "$TARGET_DIR/$FILENAME_WITHOUT_EXTENSION.txt"
+  rm "$TARGET_DIR/$FILENAME_WITHOUT_EXTENSION.txt"
   echo "🎉 Text copied to clipboard!"
 }
