@@ -32,6 +32,10 @@ brew_install_or_upgrade docker
 brew_install_or_upgrade docker-machine
 brew_install_or_upgrade git-lfs
 
+# taps
+brew tap cantino/mcfly
+brew install mcfly
+
 # rust based tools
 brew_install_or_upgrade bat
 brew_install_or_upgrade exa

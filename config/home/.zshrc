@@ -44,6 +44,9 @@ iterm2_print_user_vars() {
   iterm2_set_user_var pwd $(pwd)
 }
 
+# mcfly
+eval "$(mcfly init zsh)"
+
 ################################################################################
 # nvm
 export NVM_DIR="$HOME/.nvm"
