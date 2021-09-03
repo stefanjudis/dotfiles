@@ -1,7 +1,6 @@
 aaron-bond.better-comments
 be5invis.toml
 christian-kohler.npm-intellisense
-CoenraadS.bracket-pair-colorizer
 eamodio.gitlens
 EditorConfig.EditorConfig
 esbenp.prettier-vscode
