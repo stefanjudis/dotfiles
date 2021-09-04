@@ -143,7 +143,7 @@ function extract-text-from-image() {
   FILENAME=$(basename -- "$1");
   FILENAME_WITHOUT_EXTENSION="${FILENAME%.*}";
 
-  tesseract "$1" "$TARGET_DIR/$FILENAME_WITHOUT_EXTENSION" -l eng txt;
+  tesseract "$1" "$TARGET_DIR/$FILENAME_WITHOUT_EXTENSION" -l eng txt || return 1;
   pbcopy < "$TARGET_DIR/$FILENAME_WITHOUT_EXTENSION.txt";
   rm "$TARGET_DIR/$FILENAME_WITHOUT_EXTENSION.txt";
   echo "🎉 Text copied to clipboard!";

@@ -78,6 +78,8 @@ git clone git@github.com:djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-t
 bash "$SCRIPTS_DIR/brew.sh" "$ROOT_DIR"
 bash "$SCRIPTS_DIR/mac.sh" "$ROOT_DIR"
 bash "$SCRIPTS_DIR/node.sh" "$ROOT_DIR"
+# alfred has to run after node 👇
+bash "$SCRIPTS_DIR/alfred.sh" "$ROOT_DIR"
 bash "$SCRIPTS_DIR/cask.sh" "$ROOT_DIR"
 bash "$SCRIPTS_DIR/code.sh" "$ROOT_DIR"
 bash "$SCRIPTS_DIR/go.sh" "$ROOT_DIR"

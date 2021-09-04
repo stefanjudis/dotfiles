@@ -1,5 +1,3 @@
-alfred-fkill
-alfred-hl
 fkill-cli
 git-recall
 http-server
