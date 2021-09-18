@@ -34,6 +34,7 @@ alias npm-reset='rm -rf node_modules && rm -f package-lock.json && npm install &
 alias dnm='rm -rf node_modules && npm i'
 
 alias gcop='git co -p'
+alias gap='git add -p'
 alias gcop!='git co -p --amend'
 alias gz='git zup'
 
