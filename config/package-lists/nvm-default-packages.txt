@@ -11,3 +11,4 @@ trash-cli
 vmd
 wifi-password-cli
 vdx
+contentful-management
