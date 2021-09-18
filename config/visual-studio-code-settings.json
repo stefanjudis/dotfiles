@@ -1,53 +1,103 @@
 {
-  "editor.fontFamily": "Fira Code",
-  "editor.rulers": [
-    80
-  ],
-  "editor.tabSize": 2,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "breadcrumbs.enabled": false,
+  "editor.autoIndent": "full",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.fontFamily": "Fira Code iScript",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "editor.fontWeight": "500",
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.minimap.maxColumn": 200,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.showSlider": "always",
+  "editor.padding.top": 10,
   "editor.renderWhitespace": "all",
-  "editor.tabCompletion": true,
-  "editor.autoIndent": true,
+  "editor.rulers": [80],
+  "editor.semanticHighlighting.enabled": true,
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 2,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          // following will be in italic
+          "comment",
+          "keyword", // import, export, return…
+          "storage.modifier", // static keyword
+          "storage.type.class.js", // class keyword
+          "storage.type.js" // const, let, var
+        ],
+        "settings": {
+          "fontStyle": "italic bold"
+        }
+      },
+      {
+        "scope": [
+          // following will be excluded from italics
+          "keyword.control", // if/else
+          "keyword.operator" // ligatures
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
+  "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 0,
-  "files.trimTrailingWhitespace": true,
-  "files.autoSave": "onWindowChange",
-  "window.zoomLevel": 0,
   "extensions.ignoreRecommendations": false,
-  "gitlens.keymap": "chorded",
+  "files.autoSave": "onWindowChange",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
     "suppressFileNotUnderSourceControlWarning": false,
     "suppressGitVersionWarning": false,
     "suppressLineUncommittedWarning": false,
-    "suppressNoRepositoryWarning": false,
-    "suppressResultsExplorerNotice": false,
-    "suppressShowKeyBindingsNotice": true
+    "suppressNoRepositoryWarning": false
   },
-  "gitlens.historyExplorer.enabled": true,
-  "gitlens.views.fileHistory.enabled": true,
-  "gitlens.views.lineHistory.enabled": true,
-  "breadcrumbs.enabled": true,
-  "explorer.confirmDragAndDrop": false,
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  "gitlens.keymap": "chorded",
+  "inline-parameters.enabled": true,
+  "inline-parameters.hideSingleParameters": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
-  "editor.minimap.renderCharacters": false,
-  "editor.minimap.maxColumn": 200,
-  "editor.minimap.showSlider": "always",
-  "workbench.statusBar.feedback.visible": false,
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "editor.fontWeight": "500",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "settingsSync.ignoredSettings": [],
+  "terminal.integrated.fontSize": 24,
+  "vscode-pets.petColor": "black",
+  "vscode-pets.petSize": "medium",
+  "vscode-pets.petType": "dog",
+  "vscode-pets.position": "explorer",
+  "window.autoDetectColorScheme": true,
+  "window.title": "${activeEditorMedium}",
+  "window.titleBarStyle": "native",
+  "window.titleSeparator": " — ${activeEditorLong}",
+  "window.zoomLevel": -1,
+  "workbench.activityBar.visible": true,
+  "workbench.colorCustomizations": {
+    "editorBracketHighlight.foreground1": "#5caeef",
+    "editorBracketHighlight.foreground2": "#dfb976",
+    "editorBracketHighlight.foreground3": "#c172d9",
+    "editorBracketHighlight.foreground4": "#4fb1bc",
+    "editorBracketHighlight.foreground5": "#97c26c",
+    "editorBracketHighlight.foreground6": "#abb2c0",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#db6165"
   },
   "workbench.colorTheme": "Yi Dark",
-  "editor.formatOnSave": true,
-  "files.insertFinalNewline": true
+  "workbench.editor.showTabs": false,
+  "workbench.preferredDarkColorTheme": "Yi Dark",
+  "workbench.preferredLightColorTheme": "Yi Light",
+  "workbench.statusBar.visible": false
 }
