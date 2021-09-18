@@ -18,20 +18,24 @@ if [ -L ~/Library/Application\ Support/Code/user/settings.json ]; then
   rm ~/Library/Application\ Support/Code/User/settings.json
 fi
 
-ln -s $ROOT_DIR/config/visual-studio-code-settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -s "$ROOT_DIR/config/visual-studio-code-settings.json" ~/Library/Application\ Support/Code/User/settings.json
 
 brew tap homebrew/cask-versions
 
 echo "installing custom fonts"
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
+# Fira code with fancy italics
+open "$ROOT_DIR/static/fira-code-iscript/FiraCodeiScript-Regular.ttf"
+open "$ROOT_DIR/static/fira-code-iscript/FiraCodeiScript-Bold.ttf"
+open "$ROOT_DIR/static/fira-code-iscript/FiraCodeiScript-Italic.ttf"
+
 brew install --cask font-oswald
 brew install --cask font-ubuntu
 # contentful slide font
 brew install --cask font-muli
 
 brew install --cask graphql-playground
-brew install --cask typora
 
 brew tap jeroenknoops/tap
 brew install gitin
