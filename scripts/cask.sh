@@ -13,7 +13,7 @@ echo "installing VSCode"
 brew uninstall --cask --force visual-studio-code && brew install --cask visual-studio-code
 brew uninstall --cask --force visual-studio-code-insiders && brew install --cask visual-studio-code-insiders
 
-if [ -L ~/Library/Application\ Support/Code/user/settings.json ]; then
+if [ -f ~/Library/Application\ Support/Code/User/settings.json ]; then
   echo "found old visual studio code settings. removing..."
   rm ~/Library/Application\ Support/Code/User/settings.json
 fi
@@ -32,8 +32,6 @@ open "$ROOT_DIR/static/fira-code-iscript/FiraCodeiScript-Italic.ttf"
 
 brew install --cask font-oswald
 brew install --cask font-ubuntu
-# contentful slide font
-brew install --cask font-muli
 
 brew install --cask graphql-playground
 
