@@ -10,7 +10,6 @@ jeremyljackson.vs-docblock
 mikestead.dotenv
 octref.vetur
 okitavera.vscode-nunjucks-formatter
-pflannery.vscode-versionlens
 rebornix.project-snippets
 ronnidc.nunjucks
 sleistner.vscode-fileutils
@@ -24,3 +23,4 @@ ChakrounAnas.turbo-console-log
 anteprimorac.html-end-tag-labels
 liamhammett.inline-parameters
 richie5um2.vscode-sort-json
+idered.npm
