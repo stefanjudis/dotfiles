@@ -28,6 +28,10 @@ async function main() {
 
   const nextWeekly = weeklies.items[0];
 
+  if (!nextWeekly) {
+    return console.log("No `Web Weekly` found?");
+  }
+
   nextWeekly.fields.body[defaultLocale] =
     nextWeekly.fields.body[defaultLocale] + `\n\n### ${headline}\n\n${url}`;
 
