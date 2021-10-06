@@ -24,3 +24,4 @@ anteprimorac.html-end-tag-labels
 liamhammett.inline-parameters
 richie5um2.vscode-sort-json
 idered.npm
+codespaces-contrib.codeswing
