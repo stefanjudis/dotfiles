@@ -76,7 +76,7 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
 # make global modules requireable
-export NODE_PATH="$(npm config get prefix)/lib/node_modules"
+export NODE_PATH="$(npm root -g)"
 
 ################################################################################
 # npm
