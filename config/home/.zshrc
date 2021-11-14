@@ -20,6 +20,23 @@ setopt histignorespace
 # remove dups from history
 setopt hist_ignore_all_dups
 
+
+################################################################################
+# things for the `lc` command
+LC_DELIMITER_START="👉";
+LC_DELIMITER_END="⭐";
+
+# write current command location to `.zsh_history_ext`
+# used in `lc` command
+function zshaddhistory() {
+  echo "${1%%$'\n'}${LC_DELIMITER_START}${PWD}${LC_DELIMITER_END}" >> ~/.zsh_history_ext
+}
+
+# `lc` – last command
+function lc() {
+  grep -v "^lc\|^cd\|^j\|ll\|^git\|^gss" ~/.zsh_history_ext | grep -a --color=never "${PWD}${LC_DELIMITER_END}" | cut -f1 -d "${LC_DELIMITER_START}" | fzf;
+}
+
 ################################################################################
 # oh-my-zsh
 
@@ -93,19 +110,26 @@ if type complete &>/dev/null; then
   _npm_completion () {
     local words cword
     if type _get_comp_words_by_ref &>/dev/null; then
-      _get_comp_words_by_ref -n = -n @ -w words -i cword
+      _get_comp_words_by_ref -n = -n @ -n : -w words -i cword
     else
       cword="$COMP_CWORD"
       words=("${COMP_WORDS[@]}")
     fi
 
     local si="$IFS"
-    IFS=$'\n' COMPREPLY=($(COMP_CWORD="$cword" \
+    if ! IFS=$'\n' COMPREPLY=($(COMP_CWORD="$cword" \
                            COMP_LINE="$COMP_LINE" \
                            COMP_POINT="$COMP_POINT" \
                            npm completion -- "${words[@]}" \
-                           2>/dev/null)) || return $?
+                           2>/dev/null)); then
+      local ret=$?
+      IFS="$si"
+      return $ret
+    fi
     IFS="$si"
+    if type __ltrim_colon_completions &>/dev/null; then
+      __ltrim_colon_completions "${words[cword]}"
+    fi
   }
   complete -o default -F _npm_completion npm
 elif type compdef &>/dev/null; then
@@ -128,11 +152,16 @@ elif type compctl &>/dev/null; then
     read -l line
     read -ln point
     si="$IFS"
-    IFS=$'\n' reply=($(COMP_CWORD="$cword" \
+    if ! IFS=$'\n' reply=($(COMP_CWORD="$cword" \
                        COMP_LINE="$line" \
                        COMP_POINT="$point" \
                        npm completion -- "${words[@]}" \
-                       2>/dev/null)) || return $?
+                       2>/dev/null)); then
+
+      local ret=$?
+      IFS="$si"
+      return $ret
+    fi
     IFS="$si"
   }
   compctl -K _npm_completion npm
