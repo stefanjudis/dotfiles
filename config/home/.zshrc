@@ -23,18 +23,30 @@ setopt hist_ignore_all_dups
 
 ################################################################################
 # things for the `lc` command
-LC_DELIMITER_START="👉";
+LC_DELIMITER_START="⋮";
 LC_DELIMITER_END="⭐";
 
-# write current command location to `.zsh_history_ext`
-# used in `lc` command
+# write current command location to `.zsh_history_ext` whenever a command is ran
+# `.zsh_history_ext` is used in `lc` command
 function zshaddhistory() {
-  echo "${1%%$'\n'}${LC_DELIMITER_START}${PWD}${LC_DELIMITER_END}" >> ~/.zsh_history_ext
+  # ignore empty commands
+  if [[ $1 == $'\n' ]]; then return; fi
+
+  # ignore specific commands
+  local COMMANDS_TO_IGNORE=( ls ll cd j git gss gap lc );
+  for i in "${COMMANDS_TO_IGNORE[@]}"
+  do
+    if [[ $1 == *"$i"* ]]; then
+      return;
+    fi
+  done
+
+  echo "${1%%$'\n'}${LC_DELIMITER_START}${PWD}${LC_DELIMITER_END}" >> ~/.lc_history
 }
 
 # `lc` – last command
 function lc() {
-  grep -v "^lc\|^cd\|^j\|ll\|^git\|^gss" ~/.zsh_history_ext | grep -a --color=never "${PWD}${LC_DELIMITER_END}" | cut -f1 -d "${LC_DELIMITER_START}" | fzf;
+  grep -a --color=never "${PWD}${LC_DELIMITER_END}" ~/.lc_history | cut -f1 -d "${LC_DELIMITER_START}" | tail -r | fzf;
 }
 
 ################################################################################
