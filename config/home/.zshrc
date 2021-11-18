@@ -36,17 +36,26 @@ function zshaddhistory() {
   local COMMANDS_TO_IGNORE=( ls ll cd j git gss gap lc ggpush ggpull);
   for i in "${COMMANDS_TO_IGNORE[@]}"
   do
-    if [[ $1 == *"$i"* ]]; then
+    # return if the run commands starts with the ignored commands
+    if [[ $1 == "$i"* ]]; then
       return;
     fi
   done
 
+  echo "adding $1";
   echo "${1%%$'\n'}${LC_DELIMITER_START}${PWD}${LC_DELIMITER_END}" >> ~/.lc_history
 }
 
 # `lc` – last command
 function lc() {
-  grep -a --color=never "${PWD}${LC_DELIMITER_END}" ~/.lc_history | cut -f1 -d "${LC_DELIMITER_START}" | tail -r | fzf;
+  SELECTED_COMMAND=$(grep -a --color=never "${PWD}${LC_DELIMITER_END}" ~/.lc_history | cut -f1 -d "${LC_DELIMITER_START}" | tail -r | fzf);
+
+  # handle case of selecting no command via fzf
+  if [[ ${#SELECTED_COMMAND} -gt 0 ]]; then
+    echo "Running '$SELECTED_COMMAND'..."
+    echo "**************************"
+    eval " $SELECTED_COMMAND";
+  fi
 }
 
 ################################################################################
