@@ -33,7 +33,7 @@ function zshaddhistory() {
   if [[ $1 == $'\n' ]]; then return; fi
 
   # ignore specific commands
-  local COMMANDS_TO_IGNORE=( ls ll cd j git gss gap lc );
+  local COMMANDS_TO_IGNORE=( ls ll cd j git gss gap lc ggpush ggpull);
   for i in "${COMMANDS_TO_IGNORE[@]}"
   do
     if [[ $1 == *"$i"* ]]; then
