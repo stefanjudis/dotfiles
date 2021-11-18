@@ -42,7 +42,6 @@ function zshaddhistory() {
     fi
   done
 
-  echo "adding $1";
   echo "${1%%$'\n'}${LC_DELIMITER_START}${PWD}${LC_DELIMITER_END}" >> ~/.lc_history
 }
 
