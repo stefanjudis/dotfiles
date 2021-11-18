@@ -64,8 +64,8 @@ symlink_files "$FROM_DIR/*" "$TARGET_DIR"
 mkdir ~/.oh-my-zsh/completions
 symlink_files "$FROM_DIR/completions/*" ~/.oh-my-zsh/completions
 
-echo "Installing zsh-syntax-highlighting"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+echo "Installing fast-syntax-highlighting"
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
 
 echo "Installing zsh-autosuggestions"
 git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions

@@ -40,7 +40,7 @@ function lc() {
 ################################################################################
 # oh-my-zsh
 
-plugins=(git node npm github zsh-syntax-highlighting zsh-autosuggestions alias-tips)
+plugins=(git node npm github zsh-autosuggestions alias-tips fast-syntax-highlighting)
 ZSH_THEME="stefanjudis"
 
 # Customize history
