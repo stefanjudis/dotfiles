@@ -31,6 +31,7 @@ brew_install_or_upgrade nektos/tap/act
 brew_install_or_upgrade docker
 brew_install_or_upgrade docker-machine
 brew_install_or_upgrade git-lfs
+brew_install_or_upgrade bluesnooze
 
 # taps
 brew tap cantino/mcfly
