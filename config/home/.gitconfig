@@ -27,12 +27,12 @@
   keepBackup = true
 [core]
   editor = vim
-  excludesfile = /Users/stefanjudis/.gitignore_global
+  excludesfile = ~/.gitignore_global
   pager = delta --plus-color="#195019" --minus-color="#601919" --paging=always
 [push]
   default = current
 [help]
-  autocorrect = 40
+  autocorrect = prompt
 [interactive]
   diffFilter = delta --plus-color="#195019" --minus-color="#601919" --color-only
 [commit]
