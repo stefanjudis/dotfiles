@@ -32,7 +32,8 @@ open "$ROOT_DIR/static/fira-code-iscript/FiraCodeiScript-Italic.ttf"
 
 brew install --cask font-oswald
 brew install --cask font-ubuntu
-
+# terminal font
+brew install --cask font-caskaydia-cove-nerd-font
 brew install --cask graphql-playground
 
 brew tap jeroenknoops/tap
