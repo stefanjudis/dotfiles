@@ -17,7 +17,7 @@
   "editor.guides.bracketPairs": true,
   "editor.fontFamily": "Fira Code iScript",
   "editor.fontLigatures": true,
-  "editor.fontSize": 16,
+  "editor.fontSize": 14,
   "editor.fontWeight": "500",
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
@@ -28,6 +28,7 @@
   "editor.renderWhitespace": "all",
   "editor.rulers": [80],
   "editor.semanticHighlighting.enabled": true,
+  "editor.suggest.preview": true,
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.tokenColorCustomizations": {
@@ -87,7 +88,6 @@
   "window.title": "${activeEditorMedium}",
   "window.titleBarStyle": "native",
   "window.titleSeparator": " — ${activeEditorLong}",
-  "window.zoomLevel": -1,
   "workbench.activityBar.visible": true,
   "workbench.colorCustomizations": {
     "editorBracketHighlight.foreground1": "#5caeef",
@@ -103,5 +103,8 @@
   "workbench.preferredDarkColorTheme": "Yi Dark",
   "workbench.preferredLightColorTheme": "Yi Light",
   "workbench.statusBar.visible": false,
-  "javascript.inlayHints.functionLikeReturnTypes.enabled": true
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "screencastMode.fontSize": 30,
+  "screencastMode.onlyKeyboardShortcuts": true,
+  "editor.accessibilitySupport": "off"
 }
