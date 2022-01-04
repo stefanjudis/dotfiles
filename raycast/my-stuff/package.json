@@ -1,0 +1,58 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "my-stuff",
+  "title": "My Stuff",
+  "description": "",
+  "icon": "command-icon.png",
+  "author": "stefanjudis",
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "add-weekly-link",
+      "title": "Add Weekly Link",
+      "description": "Add a link to the next newsletter",
+      "mode": "view"
+    },
+    {
+      "name": "open-entry",
+      "title": "Open a specific entry",
+      "description": "Find an entry via the URL",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "token",
+      "type": "password",
+      "required": true,
+      "title": "Contentful Token",
+      "description": "Your Contentful Token.",
+      "placeholder": "Enter your CMA token"
+    },
+    {
+      "name": "spaceId",
+      "type": "textfield",
+      "required": true,
+      "title": "Contentful Space Id",
+      "description": "Your Contentful Space.",
+      "placeholder": "Enter your Space Id"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.26.2",
+    "contentful-management": "^7.45.7"
+  },
+  "devDependencies": {
+    "@types/node": "~16.10.0",
+    "@types/react": "^17.0.28",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop"
+  }
+}
