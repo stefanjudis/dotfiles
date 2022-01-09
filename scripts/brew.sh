@@ -60,3 +60,7 @@ mas install id1056643111
 mas install 1532419400
 # Hand mirror
 mas install 1502839586
+
+# ********************************
+# paid apps
+# https://apps.apple.com/us/app/rcmd-app-switcher/id1596283165
