@@ -28,13 +28,13 @@
 [core]
   editor = vim
   excludesfile = ~/.gitignore_global
-  pager = delta --plus-color="#195019" --minus-color="#601919" --paging=always
+  pager = delta --plus-style="syntax #195019" --minus-style="normal #601919" --paging=always
 [push]
   default = current
 [help]
   autocorrect = prompt
 [interactive]
-  diffFilter = delta --plus-color="#195019" --minus-color="#601919" --color-only
+  diffFilter = delta --plus-style="syntax #195019" --minus-style="normal #601919" --color-only
 [commit]
   verbose = true
 [init]
