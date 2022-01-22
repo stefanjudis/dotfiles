@@ -34,7 +34,7 @@
 [help]
   autocorrect = prompt
 [interactive]
-  diffFilter = delta --plus-style="syntax #195019" --minus-style="normal #601919" --color-only
+  diffFilter = delta --color-only
 [commit]
   verbose = true
 [init]

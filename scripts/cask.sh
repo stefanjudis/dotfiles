@@ -52,7 +52,6 @@ brew install --cask sigmaos
 brew install --cask zoomus
 brew install --cask spotify
 brew install --cask ngrok
-brew install --cask dashlane
 brew install --cask bartender
 brew install --cask choosy
 brew install --cask rocket

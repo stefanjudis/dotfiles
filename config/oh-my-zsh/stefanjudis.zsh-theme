@@ -9,4 +9,17 @@ PROMPT='
 %{$reset_color%})
 ${PS1_EMOJIS[$RANDOM % $NUMBER_OF_EMOJIS]}  $THEME_DELIMITER '
 
-RPROMPT='%{$fg_bold[blue]%} %*%{$reset_color%}'
+github_url() {
+  # GitHub codepoint is supported by nerd fonts
+  # CaskaydiaCove Nerd Font
+  GITHUB_ICON=""
+
+  if [[ "$PWD" == *"github.com"*/*/* ]]; then
+    echo "%{$fg_bold[blue]%} %3/ $GITHUB_ICON"
+    return
+  fi
+
+  echo ""
+}
+
+RPROMPT='$(github_url)'

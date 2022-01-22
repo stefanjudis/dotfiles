@@ -4,9 +4,7 @@ imagemin-cli
 live-server
 manage-wifi-cli
 netlify-cli
-npm
 trash-cli
 vmd
 wifi-password-cli
 vdx
-contentful-management
