@@ -57,3 +57,4 @@ brew install --cask choosy
 brew install --cask rocket
 brew install --cask monitorcontrol
 brew install --cask screenflow
+brew install --cask keycastr
