@@ -48,7 +48,7 @@ brew install --cask iterm2
 # install iterm utilities right away
 curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
 
-brew install --cask sigmaos
+brew install --cask wavebox 
 brew install --cask zoomus
 brew install --cask spotify
 brew install --cask ngrok
