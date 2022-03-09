@@ -15,9 +15,6 @@ defaults write com.apple.Finder AppleShowAllFiles -bool true
 # echo "only use UTF-8 in Terminal.app"
 defaults write com.apple.terminal StringEncodings -array 4
 
-# echo "expand save dialog by default"
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-
 # echo "show the ~/Library folder in Finder"
 chflags nohidden ~/Library
 
