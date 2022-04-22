@@ -40,6 +40,9 @@ defaults write com.apple.finder ShowPathbar -bool true
 echo "Show Status bar in Finder"
 defaults write com.apple.finder ShowStatusBar -bool true
 
+echo "Make Finder quitable"
+defaults write com.apple.finder QuitMenuItem -bool true
+
 echo "Set a blazingly fast keyboard repeat rate"
 defaults write NSGlobalDomain KeyRepeat -int 1
 
@@ -90,6 +93,9 @@ defaults write com.apple.dock static-only -bool true; killall Dock
 
 echo "Disable CMD+space for spotlight"
 /usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.symbolichotkeys.plist -c "Set AppleSymbolicHotKeys:64:enabled false"
+
+echo "Always show scrollbars"
+defaults write -g AppleShowScrollBars -string "Always"
 
 killall SystemUIServer
 killall "Dock"
