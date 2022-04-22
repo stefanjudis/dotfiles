@@ -97,5 +97,10 @@ echo "Disable CMD+space for spotlight"
 echo "Always show scrollbars"
 defaults write -g AppleShowScrollBars -string "Always"
 
+echo "Set red accent and highlight color"
+# more info https://github.com/yuhonas/osx-colors/blob/main/src/color_utils.py
+defaults write -g AppleAccentColor -string 0
+defaults write -g AppleHighlightColor -string "1.000000 0.733333 0.721569 Red"
+
 killall SystemUIServer
 killall "Dock"
