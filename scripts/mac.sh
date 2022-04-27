@@ -40,9 +40,6 @@ defaults write com.apple.finder ShowPathbar -bool true
 echo "Show Status bar in Finder"
 defaults write com.apple.finder ShowStatusBar -bool true
 
-echo "Make Finder quitable"
-defaults write com.apple.finder QuitMenuItem -bool true
-
 echo "Set a blazingly fast keyboard repeat rate"
 defaults write NSGlobalDomain KeyRepeat -int 1
 
