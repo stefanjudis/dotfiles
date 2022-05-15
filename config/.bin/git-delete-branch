@@ -2,11 +2,10 @@
 
 if [ -z "$1" ]; then
   headline="Current branch: $(git branch --show-current)"
-  branches=$(git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format="%(refname:short)") &&
+  branches=$(git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format="%(refname:short)" | grep --invert-match $(git branch --show-current)) &&
   branch=$(echo "$branches" | fzf --multi --header="$headline") &&
   git branch -D "$(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")"
 else
   git branch -D "$1"
   git push origin --delete "$1"
 fi
-
