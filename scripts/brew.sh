@@ -48,12 +48,8 @@ brew install ffmpeg --with-libvorbis --with-theora --with-libogg --with-libvorbi
 # *********************************
 # mac app store
 brew_install_or_upgrade mas
-# magnet window management
-mas install 441258766
 # todoist
 mas install 585829637
-# NextDNS
-mas install 1464122853
 # Clocker
 mas install id1056643111
 # Meeting Bar
