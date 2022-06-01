@@ -20,7 +20,6 @@ chsh -s /bin/zsh
 brew_install_or_upgrade svn
 brew_install_or_upgrade highlight
 brew_install_or_upgrade jq
-brew_install_or_upgrade autojump
 brew_install_or_upgrade gh
 brew_install_or_upgrade curl
 brew_install_or_upgrade git
@@ -44,7 +43,7 @@ brew_install_or_upgrade exa
 brew_install_or_upgrade grex
 
 # ffmpeg for quick video compression
-brew install ffmpeg --with-vorbis --with-libvorbis --with-vorbis --with-theora --with-libogg --with-libvorbis --with-gpl --with-version3 --with-nonfree --with-postproc --with-libaacplus --with-libass --with-libcelt --with-libfaac --with-libfdk-aac --with-libfreetype --with-libmp3lame --with-libopencore-amrnb --with-libopencore-amrwb --with-libopenjpeg --with-openssl --with-libopus --with-libschroedinger --with-libspeex --with-libtheora --with-libvo-aacenc --with-libvorbis --with-libvpx --with-libx264 --with-libxvid
+brew install ffmpeg --with-libvorbis --with-theora --with-libogg --with-libvorbis --with-gpl --with-version3 --with-nonfree --with-postproc --with-libaacplus --with-libass --with-libcelt --with-libfaac --with-libfdk-aac --with-libfreetype --with-libmp3lame --with-libopencore-amrnb --with-libopencore-amrwb --with-libopenjpeg --with-openssl --with-libopus --with-libschroedinger --with-libspeex --with-libtheora --with-libvo-aacenc --with-libvorbis --with-libvpx --with-libx264 --with-libxvid
 
 # *********************************
 # mac app store

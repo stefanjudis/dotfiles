@@ -7,6 +7,9 @@ export EDITOR=code
 export LC_ALL=en_US.UTF-8
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT='❗  Use the alias: '
 
+export _Z_CMD="j"
+. ~/.bin/z.sh
+
 ################################################################################
 # private
 source ~/.my-config.sh
@@ -188,6 +191,3 @@ elif type compctl &>/dev/null; then
 fi
 ###-end-npm-completion-###
 
-################################################################################
-# autojump
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
