@@ -11,7 +11,6 @@ ROOT_DIR=$1
 
 echo "installing VSCode"
 brew uninstall --cask --force visual-studio-code && brew install --cask visual-studio-code
-brew uninstall --cask --force visual-studio-code-insiders && brew install --cask visual-studio-code-insiders
 
 if [ -f ~/Library/Application\ Support/Code/User/settings.json ]; then
   echo "found old visual studio code settings. removing..."
@@ -49,7 +48,7 @@ brew install --cask iterm2
 curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
 
 brew install --cask wavebox 
-brew install --cask zoomus
+brew install --cask zoom
 brew install --cask spotify
 brew install --cask ngrok
 brew install --cask bartender

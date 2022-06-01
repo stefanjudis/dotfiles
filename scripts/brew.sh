@@ -16,6 +16,8 @@ brew_install_or_upgrade zsh-completions
 # set it as default shell
 chsh -s /bin/zsh
 
+# some brew cask dependencies really need svn :/
+brew_install_or_upgrade svn
 brew_install_or_upgrade highlight
 brew_install_or_upgrade jq
 brew_install_or_upgrade autojump
@@ -27,7 +29,6 @@ brew_install_or_upgrade go
 brew_install_or_upgrade shellcheck
 brew_install_or_upgrade fzf
 brew_install_or_upgrade coreutils
-brew_install_or_upgrade nektos/tap/act
 brew_install_or_upgrade docker
 brew_install_or_upgrade docker-machine
 brew_install_or_upgrade git-lfs

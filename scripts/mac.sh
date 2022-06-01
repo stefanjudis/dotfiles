@@ -99,5 +99,8 @@ echo "Set red accent and highlight color"
 defaults write -g AppleAccentColor -string 0
 defaults write -g AppleHighlightColor -string "1.000000 0.733333 0.721569 Red"
 
+echo "Update Apple developer utils"
+softwareupdate --all --install --force
+
 killall SystemUIServer
 killall "Dock"
