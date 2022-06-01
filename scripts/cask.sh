@@ -38,7 +38,6 @@ brew install --cask graphql-playground
 brew tap jeroenknoops/tap
 brew install gitin
 
-brew install --cask qlmarkdown
 brew install --cask google-chrome
 brew install --cask google-chrome-canary
 brew install --cask firefox
@@ -47,17 +46,19 @@ brew install --cask iterm2
 # install iterm utilities right away
 curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
 
-brew install --cask wavebox 
+brew install --cask wavebox
 brew install --cask zoom
 brew install --cask spotify
 brew install --cask ngrok
 brew install --cask bartender
+brew install --cask rocket
+brew install --cask monitorcontrol
+brew install --cask screenflow
+brew install --cask keycastr
+brew install --cask raycast
+brew install --cask cron
 
 # choosy needs this rosetta thing for some reasons
 sudo softwareupdate --install-rosetta
 brew install --cask choosy
 
-brew install --cask rocket
-brew install --cask monitorcontrol
-brew install --cask screenflow
-brew install --cask keycastr
