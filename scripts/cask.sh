@@ -52,7 +52,11 @@ brew install --cask zoom
 brew install --cask spotify
 brew install --cask ngrok
 brew install --cask bartender
+
+# choosy needs this rosetta thing for some reasons
+sudo softwareupdate --install-rosetta
 brew install --cask choosy
+
 brew install --cask rocket
 brew install --cask monitorcontrol
 brew install --cask screenflow
