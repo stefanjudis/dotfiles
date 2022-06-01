@@ -68,7 +68,7 @@ echo "Installing fast-syntax-highlighting"
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
 
 echo "Installing zsh-autosuggestions"
-git clone git://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
 echo "Installing alias-tips"
 git clone git@github.com:djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
