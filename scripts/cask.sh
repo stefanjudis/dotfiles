@@ -62,3 +62,6 @@ brew install --cask cron
 sudo softwareupdate --install-rosetta
 brew install --cask choosy
 
+# drivers still work with cask but have to be installed like this
+brew tap homebrew/cask-drivers
+brew install elgato-control-center
