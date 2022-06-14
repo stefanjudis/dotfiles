@@ -57,6 +57,7 @@ brew install --cask screenflow
 brew install --cask keycastr
 brew install --cask raycast
 brew install --cask cron
+brew install --cask signal
 
 # choosy needs this rosetta thing for some reasons
 sudo softwareupdate --install-rosetta
