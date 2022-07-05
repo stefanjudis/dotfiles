@@ -52,3 +52,9 @@ alias freewifi="sudo ifconfig en0 ether `openssl rand -hex 6 | sed 's/\(..\)/\1:
 alias p='cd ~/Projects/'
 alias d='cd ~/Downloads/'
 alias sj='cd ~/Projects/github.com/stefanjudis/stefan-judis-website/'
+
+# suffix aliases
+# https://www.stefanjudis.com/today-i-learned/suffix-aliases-in-zsh/
+alias -s {js,json,env,gitignore,md,html,css,toml}=cat
+alias -s git="git clone"
+
