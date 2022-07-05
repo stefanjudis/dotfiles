@@ -57,8 +57,12 @@ brew install --cask screenflow
 brew install --cask keycastr
 brew install --cask raycast
 brew install --cask cron
+brew install --cask signal
 
 # choosy needs this rosetta thing for some reasons
 sudo softwareupdate --install-rosetta
 brew install --cask choosy
 
+# drivers still work with cask but have to be installed like this
+brew tap homebrew/cask-drivers
+brew install elgato-control-center
