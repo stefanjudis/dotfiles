@@ -56,5 +56,5 @@ alias sj='cd ~/Projects/github.com/stefanjudis/stefan-judis-website/'
 # suffix aliases
 # https://www.stefanjudis.com/today-i-learned/suffix-aliases-in-zsh/
 alias -s {js,json,env,gitignore,md,html,css,toml}=cat
-alias -s git="git clone"
+alias -s git="clone"
 
