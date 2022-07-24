@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 
+# Big thanks to @duboiss
+# https://github.com/stefanjudis/dotfiles/pull/5#issuecomment-1140508670
+
 if [ -d "./.git" ]; then
   git branch |
   grep --invert-match '\*' |
