@@ -1,12 +1,13 @@
 #!/usr/bin/env sh
 
-if [ -z "$1" ]; then
-  headline="Current branch: $(git branch --show-current)"
-  branches=$(git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format="%(refname:short)") &&
-  branch=$(echo "$branches" | fzf --multi --header="$headline") &&
-  git branch -D "$(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")"
+if [ -d "./.git" ]; then
+  git branch |
+  grep --invert-match '\*' |
+  grep --invert-match "master" |
+  cut -c 3- |
+  fzf --height 40% --multi --preview="git log {} --" |
+  xargs git branch --delete --force
 else
-  git branch -D "$1"
-  git push origin --delete "$1"
+  echo "Error: there's no .git dir"
+  exit 1
 fi
-
