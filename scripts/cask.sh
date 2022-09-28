@@ -58,6 +58,7 @@ brew install --cask keycastr
 brew install --cask raycast
 brew install --cask cron
 brew install --cask signal
+brew install --cask openinterminal
 
 # choosy needs this rosetta thing for some reasons
 sudo softwareupdate --install-rosetta
