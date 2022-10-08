@@ -32,6 +32,7 @@ brew_install_or_upgrade docker
 brew_install_or_upgrade docker-machine
 brew_install_or_upgrade git-lfs
 brew_install_or_upgrade bluesnooze
+brew_install_or_upgrade pnpm
 
 # taps
 brew tap cantino/mcfly
