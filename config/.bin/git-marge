@@ -1,0 +1,39 @@
+#!/bin/bash
+#
+# https://github.com/mcdwayne/git-marge/blob/main/git-marge
+# git-marge: marge thinks its neat
+# Art by Matthew Kurth
+# from https://www.asciiart.eu/cartoons/simpsons
+
+set -e
+
+echo ''
+echo '   OOOO'
+echo ' OOOOOOOOO'
+echo 'OOOOOOOOOOOO'
+echo 'OOOOOOOOOOOOO'
+echo 'OOOOOOOOOOOOOO'
+echo 'OOOOOOOOOOOOOO'
+echo ' OOOOOOOOOOOOOO'
+echo ' OOOOOOOOOOOOOO'
+echo ' OOOOOOOOOOOOOO'
+echo '  OOOOOOOOOOOOOO'
+echo '  OOOOOOOOOOOOOO'
+echo '  OOOOOOOOOOOOOO'
+echo '  OOOOOOOOOOOOOO'
+echo '   OOOOOOOOOOOOOO'
+echo '   OOOOOOOOOOOOOO'
+echo '   OOOOO \_| \_|O'
+echo '   OOOO \/  \/  \'
+echo '   OOOO (o   )o  )'
+echo '   O/c   \__/ --.'
+echo '   O\_   ,     -o'
+echo '    O|  `\_______)  Ill merge for you!'
+echo '     |       _)'
+echo '     |      |'
+echo '     oooooooo'
+echo '    /        \'
+echo
+
+
+git merge "$@"
