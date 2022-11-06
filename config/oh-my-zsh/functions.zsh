@@ -84,6 +84,11 @@ function diff() {
   git diff --no-index $1 $2;
 }
 
+function trash() {
+  echo "🗑️ Moving files to trash..."
+  mv "$@" "$HOME/.trash"
+}
+
 # overwrite mv command to also work with one argument
 function mv() {
   if [ "$#" -ne 1 ] || [ ! -f "$1" ]; then
