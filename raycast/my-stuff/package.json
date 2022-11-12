@@ -9,14 +9,20 @@
   "commands": [
     {
       "name": "add-weekly-link",
-      "title": "Add Weekly Link",
+      "title": "Add a Web Weekly Link",
       "description": "Add a link to the next newsletter",
       "mode": "view"
     },
     {
       "name": "open-entry",
-      "title": "Open a specific entry",
+      "title": "Open a Specific Entry",
       "description": "Find an entry via the URL",
+      "mode": "view"
+    },
+    {
+      "name": "update-draft",
+      "title": "Update draft",
+      "description": "Fiddle with one of these drafts",
       "mode": "view"
     }
   ],

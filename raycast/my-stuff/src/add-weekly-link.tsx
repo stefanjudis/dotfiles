@@ -1,6 +1,15 @@
-import { Form, ActionPanel, SubmitFormAction, showToast, ToastStyle, getPreferenceValues, popToRoot, showHUD } from "@raycast/api";
-import {useState} from 'react'
-import {createClient} from 'contentful-management'
+import {
+  Form,
+  ActionPanel,
+  SubmitFormAction,
+  showToast,
+  ToastStyle,
+  getPreferenceValues,
+  popToRoot,
+  showHUD,
+} from "@raycast/api";
+import { useState } from "react";
+import { createClient } from "contentful-management";
 
 interface CommandForm {
   headline: string;
@@ -15,7 +24,7 @@ interface Preferences {
 const defaultLocale = "en-US";
 
 export default function Command() {
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
 
   async function handleSubmit(values: CommandForm) {
     try {
@@ -37,11 +46,11 @@ export default function Command() {
       const nextWeekly = weeklies.items[0];
 
       nextWeekly.fields.body[defaultLocale] =
-      nextWeekly.fields.body[defaultLocale] + `\n\n## ${values.headline}\n\n${values.url}`;
+        nextWeekly.fields.body[defaultLocale] + `\n\n## ${values.headline}\n\n${values.url}`;
 
       await nextWeekly.update();
       await showHUD("Added weekly link");
-      await popToRoot({clearSearchBar: true});
+      await popToRoot({ clearSearchBar: true });
     } catch (error) {
       showToast(ToastStyle.Failure, "Add Weekly Link", "Shiat...");
     } finally {
@@ -58,8 +67,8 @@ export default function Command() {
       }
       isLoading={isLoading}
     >
-      <Form.TextField id="headline" title="Headline" placeholder="Enter headline" defaultValue="Something fancy"/>
-      <Form.TextField id="url" title="Url" placeholder="Enter Url" defaultValue="https://example.com"/>
+      <Form.TextField id="headline" title="Headline" placeholder="Enter headline" defaultValue="Something fancy" />
+      <Form.TextField id="url" title="Url" placeholder="Enter Url" defaultValue="https://example.com" />
     </Form>
   );
 }
