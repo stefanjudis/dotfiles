@@ -16,6 +16,7 @@ source ~/.my-config.sh
 
 ################################################################################
 # zsh
+# make rm something/* safer
 unsetopt RM_STAR_SILENT
 setopt RM_STAR_WAIT
 # make command prefixed with space not appear in history
