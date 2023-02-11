@@ -24,6 +24,12 @@
       "title": "Update draft",
       "description": "Fiddle with one of these drafts",
       "mode": "view"
+    },
+    {
+      "name": "pick-color",
+      "title": "Pick Color",
+      "description": "Pick a color!",
+      "mode": "no-view"
     }
   ],
   "preferences": [
@@ -45,8 +51,9 @@
     }
   ],
   "dependencies": {
-    "@raycast/api": "^1.26.2",
-    "contentful-management": "^7.45.7"
+    "@raycast/api": "^1.47.3",
+    "contentful-management": "^7.45.7",
+    "execa": "^6.1.0"
   },
   "devDependencies": {
     "@types/node": "~16.10.0",
