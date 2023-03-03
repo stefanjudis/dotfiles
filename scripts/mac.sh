@@ -94,6 +94,11 @@ echo "Disable CMD+space for spotlight"
 echo "Always show scrollbars"
 defaults write -g AppleShowScrollBars -string "Always"
 
+
+echo "Speed up dock show/hide"
+defaults write com.apple.dock autohide-delay -float 0;
+defaults write com.apple.dock autohide-time-modifier -int 0;
+
 echo "Set red accent and highlight color"
 # more info https://github.com/yuhonas/osx-colors/blob/main/src/color_utils.py
 defaults write -g AppleAccentColor -string 0
