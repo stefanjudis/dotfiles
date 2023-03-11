@@ -12,13 +12,6 @@ ROOT_DIR=$1
 echo "installing VSCode"
 brew uninstall --cask --force visual-studio-code && brew install --cask visual-studio-code
 
-if [ -f ~/Library/Application\ Support/Code/User/settings.json ]; then
-  echo "found old visual studio code settings. removing..."
-  rm ~/Library/Application\ Support/Code/User/settings.json
-fi
-
-ln -s "$ROOT_DIR/config/visual-studio-code-settings.json" ~/Library/Application\ Support/Code/User/settings.json
-
 brew tap homebrew/cask-versions
 
 echo "installing custom fonts"
