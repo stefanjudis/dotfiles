@@ -51,10 +51,6 @@ brew install ffmpeg --with-libvorbis --with-theora --with-libogg --with-libvorbi
 brew_install_or_upgrade mas
 # todoist
 mas install 585829637
-# Clocker
-mas install id1056643111
-# Meeting Bar
-mas install 1532419400
 # Hand mirror
 mas install 1502839586
 
