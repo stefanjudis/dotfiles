@@ -45,4 +45,7 @@
   prune = true
 [delta]
   side-by-side = true
-
+[rerere]
+  enabled = true
+[merge]
+	conflictstyle = diff3
